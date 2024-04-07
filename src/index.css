@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/600&family=Poppins&display=swap");
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+header #logo {
+  height: 3rem;
+}
+
+nav #primary-navigation {
+  display: flex;
+  gap: 2rem;
+  text-transform: uppercase;
+}
+nav #primary-navigation li {
+  position: relative;
+  height: 100%;
+  cursor: pointer;
+}
+nav #primary-navigation li .img-hover-underlined {
+  display: none;
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px;
+}
+nav #primary-navigation li:hover .img-hover-underlined {
+  display: block;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.App {
+  max-width: 1400px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+main {
+  flex: 1;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.6;
+  padding-top: 0.2em 0;
+}
+
+a, a:active, a:visited, a:hover {
+  text-decoration: none;
+  color: #000;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+button {
+  padding: 0.4rem;
+  border-radius: 5px;
+}
+
+@media (min-width: 576px) {
+  body {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+}
+@media (min-width: 768px) {
+  body {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
