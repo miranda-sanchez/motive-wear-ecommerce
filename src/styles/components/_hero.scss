@@ -1,0 +1,11 @@
+@use "../base/mixins" as *;
+
+.hero {
+    @include flexbox(grid, space-evenly, center);
+    grid-template-columns: 1fr 2fr;
+    padding: 0 1rem;
+    width: 100%;
+    img {
+        max-width: 500px;
+    }
+}
