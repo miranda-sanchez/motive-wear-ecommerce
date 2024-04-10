@@ -1,23 +1,53 @@
-import React from "react";
+import React, { useState } from "react";
 import underlined from "../img/Underlined-double.PNG";
 import { Link } from "react-router-dom";
+import burgerIcon from "../img/Burger-icon.PNG";
+import crossIcon from "../img/Cross-icon.PNG";
 
 const Nav = () => {
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
+  const handleToggleNav = () => {
+    setIsNavOpen(!isNavOpen);
+  };
+
   return (
     <nav>
-      <ul id="primary-navigation" className="primary-navigation flex">
+      <button
+        className="mobile-nav-toggle-btn"
+        aria-controls="primary-navigation"
+        aria-expanded={isNavOpen}
+        onClick={handleToggleNav}
+        style={{
+          backgroundImage: `url(${isNavOpen ? crossIcon : burgerIcon})`,
+        }}
+      >
+        <span className="sr-only">Menu</span>
+      </button>
+      <ul
+        id="primary-navigation"
+        className={`primary-navigation ${isNavOpen ? "open" : ""}`}
+      >
+        <Link exact to="/">
+          <li className="active">
+            Home
+            <img src={underlined} alt="" className="img-hover-underlined" />
+          </li>
+        </Link>
         <li className="active">
-          <a href="#">About</a>
+          About
           <img src={underlined} alt="" className="img-hover-underlined" />
         </li>
         <li className="active">
-          <a href="#">Projects</a>
+          Projects
           <img src={underlined} alt="" className="img-hover-underlined" />
         </li>
-        <li className="active">
-          <Link to="/contact">Contact</Link>
-          <img src={underlined} alt="" className="img-hover-underlined" />
-        </li>
+        <Link to="/contact">
+          <li className="active">
+            Contact
+            <img src={underlined} alt="" className="img-hover-underlined" />
+          </li>
+        </Link>
       </ul>
     </nav>
   );
