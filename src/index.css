@@ -76,11 +76,21 @@ nav .primary-navigation li:hover .img-hover-underlined {
   padding: 0 1rem;
   flex-direction: column;
   width: 100%;
-  height: 80vh;
+  padding: 1rem;
 }
-.hero h1 {
+.hero .title {
+  position: relative;
+}
+.hero .title h1 {
   white-space: pre;
   line-height: 2;
+}
+.hero .title .circle-img {
+  position: absolute;
+  bottom: 90px;
+  width: 130px;
+  height: 70px;
+  right: 40px;
 }
 .hero img {
   margin-top: 2rem;
@@ -90,6 +100,11 @@ nav .primary-navigation li:hover .img-hover-underlined {
 @media (min-width: 768px) {
   .hero {
     flex-direction: row;
+  }
+  .hero .title .circle-img {
+    right: 40px;
+    width: 160px;
+    bottom: 110px;
   }
   .hero img {
     width: 350px;
