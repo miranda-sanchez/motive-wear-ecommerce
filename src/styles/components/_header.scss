@@ -1,7 +1,8 @@
 @use "../base/mixins" as *;
 header {
     @include flexbox(flex, space-between, center);
-    padding: 1rem;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px dashed #000;
     #logo {
         height: 3rem;
     }

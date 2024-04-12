@@ -1,4 +1,3 @@
-
 nav {
     .mobile-nav-toggle-btn {
         display: none;
@@ -7,7 +6,8 @@ nav {
         display: flex;
         gap: var(--gap, 2rem);
         text-transform: uppercase;
-        background-color: hsl(0 0% 100% / 0.85);
+        background-color: hsl(0 0% 100% / 0.9);
+        
 
         li{
             position: relative;
@@ -33,13 +33,17 @@ nav {
         .mobile-nav-toggle-btn {
             display: block;
             position: absolute;
+            
             background-size: contain;
             background-repeat: no-repeat;
+            
             width: 2rem;
             aspect-ratio: 1;
             top: 1rem;
             right: 1rem;
+            
             z-index: 999999;
+            
             border: none;
             cursor: pointer;
             span {

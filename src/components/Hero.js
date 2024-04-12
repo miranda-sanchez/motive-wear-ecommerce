@@ -1,14 +1,16 @@
 import React from "react";
-import CVPhoto from "../img/CV-photo.PNG";
+import Polaroid from "../img/Polaroid.PNG";
 
 const Hero = () => {
   return (
     <section className="hero">
       <h1>
-        I'm an English-Spanish translator, front-end developer, and artist
+        I'm a <strong>Front-end Developer</strong> &{"\n"}
+        <strong>English-Spanish Translator</strong> & {"\n"}
+        <strong>Digital Artist</strong>
       </h1>
       <figure>
-        <img src={CVPhoto} alt="" />
+        <img src={Polaroid} alt="" />
       </figure>
     </section>
   );
