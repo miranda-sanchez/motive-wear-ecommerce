@@ -1,6 +1,7 @@
 import React from "react";
 import Polaroid from "../img/Polaroid.PNG";
 import Circle from "../img/Circle.PNG";
+import UnderlinedCurved from "../img/Underlined-curved.PNG";
 
 const Hero = () => {
   return (
@@ -12,6 +13,7 @@ const Hero = () => {
           <strong>Digital Artist</strong>
         </h1>
         <img className="circle-img" src={Circle} alt="" />
+        <img className="underlined-img" src={UnderlinedCurved} alt="" />
       </div>
       <figure>
         <img

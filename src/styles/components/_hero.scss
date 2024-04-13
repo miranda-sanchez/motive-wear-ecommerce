@@ -6,23 +6,27 @@
     flex-direction: column;
     width: 100%;
     padding: 1rem;
-    //height: 80vh;
     
     .title {
         position: relative;
         h1 {
             white-space: pre;
-            line-height: 2;
-            
+            line-height: 2;    
         }
 
         .circle-img {
             position: absolute;
             bottom: 90px;
-            width: 130px;
+            width: 125px;
             height: 70px;
-            right: 40px;
-           
+            right: 35px;
+        }
+
+        .underlined-img {
+            position: absolute;
+            bottom: 20px;
+            width: 125px;
+            right: 10px;
         }
     }
 
@@ -42,9 +46,13 @@
         .title {
             .circle-img {
                 right: 40px;
-                width: 160px;
+                width: 140px;
                 bottom: 110px;
                 
+            }
+            .underlined-img {
+                width: 150px;
+
             }
         }
 

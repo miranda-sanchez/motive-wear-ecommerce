@@ -2,7 +2,7 @@
 header {
     @include flexbox(flex, space-between, center);
     padding: 0.5rem 1rem;
-    border-bottom: 1px dashed #000;
+    border-bottom: 2px solid #000;
     #logo {
         height: 3rem;
     }
