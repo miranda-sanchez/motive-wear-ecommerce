@@ -17,6 +17,7 @@ const Hero = () => {
       </div>
       <figure>
         <img
+          className="polaroid-img"
           src={Polaroid}
           alt="Polaroid selfie with the description 'my portfolio'"
         />

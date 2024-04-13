@@ -1,0 +1,13 @@
+@use "../base/mixins" as *;
+
+.About {
+    @include flexbox(flex, center, center);
+    padding: 1rem;
+    border: 2px solid #000;
+    .about-img {
+        height: 200px;
+    }
+    .about-text {
+        margin-left: 2rem;
+    }
+}

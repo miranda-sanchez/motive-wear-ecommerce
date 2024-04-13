@@ -9,6 +9,8 @@
     
     .title {
         position: relative;
+        margin: 3rem 0;
+
         h1 {
             white-space: pre;
             line-height: 2;    
@@ -31,8 +33,7 @@
     }
 
 
-    img {
-        margin-top: 2rem;
+    .polaroid-img {
         width: 300px;
     } 
     
@@ -42,7 +43,7 @@
 @media (min-width: 768px) {
     .hero {
         flex-direction: row;
-
+        padding: 3rem 1rem 3rem 0 ;
         .title {
             .circle-img {
                 right: 40px;
@@ -56,9 +57,9 @@
             }
         }
 
-        img {
+        .polaroid-img {
             width: 350px;
-            margin-left: 1rem;
+            
         } 
     }
 }
