@@ -30,6 +30,10 @@
             width: 125px;
             right: 10px;
         }
+
+        .arrow-img {
+            display: none;
+        }
     }
 
 
@@ -51,9 +55,17 @@
                 bottom: 110px;
                 
             }
+
             .underlined-img {
                 width: 150px;
 
+            }
+
+            .arrow-img {
+                display: block;
+                position: absolute;
+                height: 150px;
+                left: 100px;
             }
         }
 

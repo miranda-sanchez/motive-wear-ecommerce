@@ -58,6 +58,11 @@ button {
   display: none;
 }
 
+p {
+  max-width: 900px;
+  margin-top: 1rem;
+}
+
 
 @media (min-width: 768px) {
   body {

@@ -1,0 +1,32 @@
+@use "../base/mixins" as *;
+
+.Footer {
+    @include flexbox(flex, center, center);
+    flex-direction: column;
+    padding: 1rem;
+    margin-top: 2rem;
+    border-top: 2px solid #000;
+
+    .socialmedia-footer {
+        @include flexbox(flex, space-between, center);
+        width: 150px;
+
+        div {
+            height: 3rem;
+            aspect-ratio: 1;
+            background-size: cover;
+        }
+        .icon-linkedin {
+            background-image: url("./img/Linkedin-icon.PNG");
+            &:hover {
+                background-image: url("./img/Linkedin-icon-hover.PNG");
+            }
+        }
+        .icon-github {
+            background-image: url("./img/Github-icon.PNG");
+            &:hover {
+                background-image: url("./img/Github-icon-hover.PNG");
+            }
+        }
+    }
+}

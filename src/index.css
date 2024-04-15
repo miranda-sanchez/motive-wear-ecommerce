@@ -102,6 +102,9 @@ nav .primary-navigation li:hover .img-hover-underlined {
   width: 125px;
   right: 10px;
 }
+.hero .title .arrow-img {
+  display: none;
+}
 .hero .polaroid-img {
   width: 300px;
 }
@@ -119,6 +122,12 @@ nav .primary-navigation li:hover .img-hover-underlined {
   .hero .title .underlined-img {
     width: 150px;
   }
+  .hero .title .arrow-img {
+    display: block;
+    position: absolute;
+    height: 150px;
+    left: 100px;
+  }
   .hero .polaroid-img {
     width: 350px;
   }
@@ -127,14 +136,55 @@ nav .primary-navigation li:hover .img-hover-underlined {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
-  border: 2px solid #000;
+  padding: 2rem;
+  flex-direction: column;
 }
 .About .about-img {
   height: 200px;
 }
 .About .about-text {
-  margin-left: 2rem;
+  text-align: justify;
+}
+
+@media (min-width: 768px) {
+  .About {
+    flex-direction: row;
+  }
+  .About .about-text {
+    margin-left: 2rem;
+  }
+}
+.Footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  margin-top: 2rem;
+  border-top: 2px solid #000;
+}
+.Footer .socialmedia-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 150px;
+}
+.Footer .socialmedia-footer div {
+  height: 3rem;
+  aspect-ratio: 1;
+  background-size: cover;
+}
+.Footer .socialmedia-footer .icon-linkedin {
+  background-image: url("./img/Linkedin-icon.PNG");
+}
+.Footer .socialmedia-footer .icon-linkedin:hover {
+  background-image: url("./img/Linkedin-icon-hover.PNG");
+}
+.Footer .socialmedia-footer .icon-github {
+  background-image: url("./img/Github-icon.PNG");
+}
+.Footer .socialmedia-footer .icon-github:hover {
+  background-image: url("./img/Github-icon-hover.PNG");
 }
 
 * {
@@ -192,6 +242,11 @@ button {
 
 .sr-only {
   display: none;
+}
+
+p {
+  max-width: 900px;
+  margin-top: 1rem;
 }
 
 @media (min-width: 768px) {

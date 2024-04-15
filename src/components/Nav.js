@@ -34,10 +34,12 @@ const Nav = () => {
             <img src={underlined} alt="" className="img-hover-underlined" />
           </li>
         </Link>
-        <li className="active">
-          About
-          <img src={underlined} alt="" className="img-hover-underlined" />
-        </li>
+        <a href="#about">
+          <li className="active">
+            About
+            <img src={underlined} alt="" className="img-hover-underlined" />
+          </li>
+        </a>
         <li className="active">
           Projects
           <img src={underlined} alt="" className="img-hover-underlined" />

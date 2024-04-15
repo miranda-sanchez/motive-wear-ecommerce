@@ -2,6 +2,7 @@ import React from "react";
 import Polaroid from "../img/Polaroid.PNG";
 import Circle from "../img/Circle.PNG";
 import UnderlinedCurved from "../img/Underlined-curved.PNG";
+import Arrow from "../img/Arrow.PNG";
 
 const Hero = () => {
   return (
@@ -12,8 +13,13 @@ const Hero = () => {
           <strong>English-Spanish Translator</strong> & {"\n"}
           <strong>Digital Artist</strong>
         </h1>
-        <img className="circle-img" src={Circle} alt="" />
-        <img className="underlined-img" src={UnderlinedCurved} alt="" />
+        <img className="circle-img" src={Circle} alt="Circle doodle" />
+        <img
+          className="underlined-img"
+          src={UnderlinedCurved}
+          alt="Sketchy underline"
+        />
+        <img className="arrow-img" src={Arrow} alt="" />
       </div>
       <figure>
         <img
