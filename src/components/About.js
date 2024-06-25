@@ -10,25 +10,18 @@ const About = () => {
       </article>
       <article className="about-text">
         <p>
-          I'm currently studying <strong>English-Spanish Translation</strong>,
-          specializing in <strong>legal and financial translation</strong> at
-          the University of Buenos Aires. I focus on delivering accurate
-          translations that meet the specific needs of legal and financial
-          documents.
+          I'm currently pursuing a 5-year graduate degree in{" "}
+          <strong>English-Spanish Translation</strong> at the University of
+          Buenos Aires. I specialize in legal, economic, medical, and IT texts.
+          I am graduating on December 2024.
         </p>
         <p>
-          I'm also pursuing a degree in <strong>Computer Science</strong>, with
-          a keen interest in <strong>Front-end development</strong> and{" "}
-          <strong>UX design</strong>. I enjoy creating user-friendly interfaces
-          and digital experiences that are both visually appealing and intuitive
-          to navigate.
-        </p>
-        <p>
-          Outside of my studies, I'm always eager to learn and grow. I stay
-          updated on industry trends and enjoy collaborating on projects that
-          challenge me to expand my skills. My goal is to leverage my expertise
-          in translation and technology to contribute meaningfully to both
-          fields, making a positive impact through innovative solutions.
+          I'm also pursuing a 5-year{" "}
+          <strong>graduate degree in Computer Science</strong>, and I'm
+          passionate about <strong>front-end development</strong> and{" "}
+          <strong>UX design</strong>. I enjoy creating visually appealing and
+          unique interfaces by embedding the illustrations I make myself into
+          the code.
         </p>
       </article>
     </section>

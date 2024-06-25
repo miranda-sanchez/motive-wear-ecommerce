@@ -1,5 +1,5 @@
 import React from "react";
-import Polaroid from "../img/Polaroid.PNG";
+import Polaroid from "../img/Polaroid.png";
 import Circle from "../img/Circle.PNG";
 import UnderlinedCurved from "../img/Underlined-curved.PNG";
 import Arrow from "../img/Arrow.PNG";

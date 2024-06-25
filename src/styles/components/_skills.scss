@@ -1,0 +1,22 @@
+@use "../base/mixins" as *;
+
+.Skills {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    h2 {
+        text-align: center;
+    }
+    .skills-container {
+        width: 100%;
+        @include flexbox(grid, center, center);
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 40px;
+        div {
+            background-color: rgb(216, 213, 213);
+            text-align: center;
+            border-radius: 5px;
+        }
+    }
+
+}
