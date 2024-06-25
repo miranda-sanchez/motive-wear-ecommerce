@@ -11,7 +11,8 @@ const Skills = () => {
   return (
     <section className="Skills">
       <div className="skills-content">
-        <h2>Programming</h2>
+        <h2>Skills</h2>
+        <h3>Programming</h3>
         <article className="skills-container">
           <div>
             <img src={HTML} alt="HTML5 logo" />
@@ -42,7 +43,7 @@ const Skills = () => {
             <span>Git</span>
           </div>
         </article>
-        <h2>Design</h2>
+        <h3>Design</h3>
         <article className="skills-container">
           <div>
             <span>Photoshop</span>

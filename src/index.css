@@ -138,9 +138,6 @@ nav .primary-navigation li:hover .img-hover-underlined {
   margin: 0 auto;
   background-color: rgb(221, 221, 221);
 }
-.Skills h2 {
-  text-align: center;
-}
 .Skills .skills-container {
   padding: 2rem;
   display: flex;
@@ -162,9 +159,14 @@ nav .primary-navigation li:hover .img-hover-underlined {
   min-width: 100px;
 }
 .Skills .skills-container div img {
-  height: 90px;
+  height: 70px;
 }
 
+@media (min-width: 768px) {
+  .Skills .skills-container div img {
+    height: 100px;
+  }
+}
 .About {
   display: flex;
   justify-content: center;
@@ -246,6 +248,16 @@ body {
 
 main {
   flex: 1;
+}
+
+h2 {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h3 {
+  text-transform: lowercase;
+  text-align: center;
 }
 
 p {

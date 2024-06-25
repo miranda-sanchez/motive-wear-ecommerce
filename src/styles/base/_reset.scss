@@ -29,6 +29,16 @@ main {
   flex: 1;
 }
 
+h2 {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h3 {
+  text-transform: lowercase;
+  text-align: center;
+}
+
 p {
   font-size: 1em;
   line-height: 1.6;
