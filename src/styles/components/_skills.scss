@@ -2,21 +2,30 @@
 
 .Skills {
     width: 100%;
-    max-width: 1400px;
+    padding: 2rem 0;
     margin: 0 auto;
+    background-color: rgb(221, 221, 221);
     h2 {
         text-align: center;
     }
     .skills-container {
         padding: 2rem;
-        @include flexbox(grid, center, center);
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        @include flexbox(flex, center, center);
+        flex-wrap: wrap;
         gap: 40px;
         div {
+            @include flexbox(flex, center, center);
+            flex-direction: column;
+            padding: 10px;
             background-color: rgb(255, 255, 255);
             text-align: center;
             border: 2px solid black;
             border-radius: 5px;
+            min-width: 100px;
+            img {
+                height: 90px;
+                
+            }
         }
     }
 

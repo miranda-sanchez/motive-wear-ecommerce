@@ -21,6 +21,7 @@ const Hero = () => {
         />
         <img className="arrow-img" src={Arrow} alt="" />
       </div>
+
       <figure>
         <img
           className="polaroid-img"

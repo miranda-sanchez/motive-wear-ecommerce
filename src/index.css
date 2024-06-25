@@ -134,25 +134,35 @@ nav .primary-navigation li:hover .img-hover-underlined {
 }
 .Skills {
   width: 100%;
-  max-width: 1400px;
+  padding: 2rem 0;
   margin: 0 auto;
+  background-color: rgb(221, 221, 221);
 }
 .Skills h2 {
   text-align: center;
 }
 .Skills .skills-container {
   padding: 2rem;
-  display: grid;
+  display: flex;
   justify-content: center;
   align-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  flex-wrap: wrap;
   gap: 40px;
 }
 .Skills .skills-container div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
   background-color: rgb(255, 255, 255);
   text-align: center;
   border: 2px solid black;
   border-radius: 5px;
+  min-width: 100px;
+}
+.Skills .skills-container div img {
+  height: 90px;
 }
 
 .About {
