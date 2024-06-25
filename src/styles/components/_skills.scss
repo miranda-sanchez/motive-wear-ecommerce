@@ -8,13 +8,14 @@
         text-align: center;
     }
     .skills-container {
-        width: 100%;
+        padding: 2rem;
         @include flexbox(grid, center, center);
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         gap: 40px;
         div {
-            background-color: rgb(216, 213, 213);
+            background-color: rgb(255, 255, 255);
             text-align: center;
+            border: 2px solid black;
             border-radius: 5px;
         }
     }

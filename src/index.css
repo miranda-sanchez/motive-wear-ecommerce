@@ -141,7 +141,7 @@ nav .primary-navigation li:hover .img-hover-underlined {
   text-align: center;
 }
 .Skills .skills-container {
-  width: 100%;
+  padding: 2rem;
   display: grid;
   justify-content: center;
   align-items: center;
@@ -149,8 +149,9 @@ nav .primary-navigation li:hover .img-hover-underlined {
   gap: 40px;
 }
 .Skills .skills-container div {
-  background-color: rgb(216, 213, 213);
+  background-color: rgb(255, 255, 255);
   text-align: center;
+  border: 2px solid black;
   border-radius: 5px;
 }
 
