@@ -27,6 +27,7 @@ body {
 
 main {
   flex: 1;
+  min-height: 100vh;
 }
 
 h2 {
@@ -35,14 +36,12 @@ h2 {
 }
 
 h3 {
-  text-transform: lowercase;
   text-align: center;
 }
 
 p {
   font-size: 1em;
   line-height: 1.6;
-  padding-top: 0.2em 0;
 }
 
 a, a:active, a:visited, a:hover{

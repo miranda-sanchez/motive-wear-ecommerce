@@ -1,0 +1,20 @@
+@use "../base/_colors" as *;
+
+button {
+    border: 1px solid #000;
+    border-bottom: 3px solid #000;
+    border-right: 3px solid #000;
+    border-radius: 0;
+    cursor: pointer;
+    font-size: 1rem;
+    text-transform: lowercase;
+    letter-spacing: .03rem;
+    
+    &.btn-action {
+        background-color: $action;
+    }
+
+    &:first-of-type {
+        margin-right: 0.5rem;
+    }
+}

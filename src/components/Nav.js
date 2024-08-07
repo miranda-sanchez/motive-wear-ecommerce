@@ -24,6 +24,7 @@ const Nav = () => {
       >
         <span className="sr-only">Menu</span>
       </button>
+
       <ul
         id="primary-navigation"
         className={`primary-navigation ${isNavOpen ? "open" : ""}`}
