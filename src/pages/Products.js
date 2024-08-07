@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { products } from "../data/ProductData";
-import imgBtn from "../img/heart.png";
+import imgHeartBtn from "../img/heart-icon.png";
+import imgCartBtn from "../img/cart-icon.png";
 
 const Products = () => {
   const [hoveredProductId, setHoveredProductId] = useState(null);
@@ -14,7 +15,7 @@ const Products = () => {
   };
 
   return (
-    <section className="Products">
+    <main className="Products">
       <h2>Products</h2>
       {products.map((product) => (
         <article
@@ -36,14 +37,17 @@ const Products = () => {
           <div className="info-product">
             <h3>{product.nameProduct}</h3>
             <p>${product.price}</p>
-            <button className="btn-action">Add to cart</button>
+            <button className="btn-action">
+              Add to Cart
+              <img className="img-btn" src={imgCartBtn} alt="Cart icon" />
+            </button>
             <button>
-              <img className="img-btn" src={imgBtn} alt="Favorite" />
+              <img className="img-btn" src={imgHeartBtn} alt="Favorite icon" />
             </button>
           </div>
         </article>
       ))}
-    </section>
+    </main>
   );
 };
 

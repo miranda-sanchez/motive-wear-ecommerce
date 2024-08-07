@@ -31,7 +31,7 @@ export const products = [
   {
     id: 2,
     nameProduct: "T-shirt 2",
-    price: 15,
+    price: 18,
     urlImg: img2,
     urlImgHover: img2Hover,
     quantity: 1,
@@ -39,7 +39,7 @@ export const products = [
   {
     id: 3,
     nameProduct: "T-shirt 3",
-    price: 15,
+    price: 14,
     urlImg: img3,
     urlImgHover: img3Hover,
     quantity: 1,
@@ -47,7 +47,7 @@ export const products = [
   {
     id: 4,
     nameProduct: "T-shirt 4",
-    price: 15,
+    price: 16,
     urlImg: img4,
     urlImgHover: img4Hover,
     quantity: 1,
@@ -55,7 +55,7 @@ export const products = [
   {
     id: 5,
     nameProduct: "T-shirt 5",
-    price: 15,
+    price: 11,
     urlImg: img5,
     urlImgHover: img5Hover,
     quantity: 1,
@@ -63,7 +63,7 @@ export const products = [
   {
     id: 6,
     nameProduct: "T-shirt 6",
-    price: 15,
+    price: 20,
     urlImg: img6,
     urlImgHover: img6Hover,
     quantity: 1,
@@ -71,7 +71,7 @@ export const products = [
   {
     id: 7,
     nameProduct: "T-shirt 7",
-    price: 15,
+    price: 17,
     urlImg: img7,
     urlImgHover: img7Hover,
     quantity: 1,
@@ -87,7 +87,7 @@ export const products = [
   {
     id: 9,
     nameProduct: "T-shirt 9",
-    price: 15,
+    price: 18,
     urlImg: img9,
     urlImgHover: img9Hover,
     quantity: 1,
@@ -95,7 +95,7 @@ export const products = [
   {
     id: 10,
     nameProduct: "T-shirt 10",
-    price: 15,
+    price: 20,
     urlImg: img10,
     urlImgHover: img10Hover,
     quantity: 1,

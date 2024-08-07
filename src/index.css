@@ -9,6 +9,7 @@
   position: fixed;
   background-color: #fff;
   z-index: 10;
+  margin-top: 0;
 }
 .Header #logo {
   height: 3.5rem;
@@ -112,7 +113,13 @@ nav .primary-navigation li:hover .img-hover-underlined {
   text-align: center;
   margin: 0;
 }
-.Products .item .info-product .img-btn {
+.Products .item .info-product button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+}
+.Products .item .info-product button .img-btn {
   height: 1rem;
 }
 .Products .item:hover {
@@ -162,8 +169,14 @@ button {
   text-transform: lowercase;
   letter-spacing: 0.03rem;
 }
+button:hover {
+  background-color: #e2e1e1;
+}
 button.btn-action {
   background-color: rgb(221, 167, 188);
+}
+button.btn-action:hover {
+  background-color: rgba(221, 167, 188, 0.7);
 }
 button:first-of-type {
   margin-right: 0.5rem;
@@ -196,6 +209,7 @@ body {
 main {
   flex: 1;
   min-height: 100vh;
+  margin-top: 6rem;
 }
 
 h2 {

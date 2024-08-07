@@ -9,9 +9,19 @@ button {
     font-size: 1rem;
     text-transform: lowercase;
     letter-spacing: .03rem;
+
+    &:hover {
+        background-color: #e2e1e1;
+        
+        
+    }
     
     &.btn-action {
         background-color: $action;
+        
+        &:hover {
+            background-color: rgba($action, 0.7);
+        }
     }
 
     &:first-of-type {

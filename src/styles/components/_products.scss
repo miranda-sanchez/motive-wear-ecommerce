@@ -29,8 +29,12 @@
                 text-align: center;
                 margin: 0;
             }
-            .img-btn {
-                height: 1rem;
+            button {
+                @include flexbox(flex, center, center);
+                float: left;
+                .img-btn {
+                    height: 1rem;
+                }
             }
             
         }

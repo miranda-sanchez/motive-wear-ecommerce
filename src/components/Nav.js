@@ -32,23 +32,21 @@ const Nav = () => {
         <Link exact to="/">
           <li className="active">
             Home
-            <img src={underlined} alt="" className="img-hover-underlined" />
+            <img
+              src={underlined}
+              alt="Underline doodle"
+              className="img-hover-underlined"
+            />
           </li>
         </Link>
-        <a href="#about">
+        <Link to="/products">
           <li className="active">
-            About
-            <img src={underlined} alt="" className="img-hover-underlined" />
-          </li>
-        </a>
-        <li className="active">
-          Projects
-          <img src={underlined} alt="" className="img-hover-underlined" />
-        </li>
-        <Link to="/contact">
-          <li className="active">
-            Contact
-            <img src={underlined} alt="" className="img-hover-underlined" />
+            Products
+            <img
+              src={underlined}
+              alt="nderline doodle"
+              className="img-hover-underlined"
+            />
           </li>
         </Link>
       </ul>
