@@ -4,41 +4,83 @@
 .Products {
     margin: 6rem 2rem; //Header's height
 
-    display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
-    
     h2 {
         grid-column: 1 / -1;
     }
-    .card {
-        position: relative;
-        button {
-            @include flexbox(flex, center, center);
-            float: left;
-            
-            
-            .img-btn {
-                height: 1rem;
-                
+
+    .options-container {
+        margin-bottom: 1rem;
+        display: flex;
+        .dropdown {
+            position: relative;
+            .dropdown-toggle-btn .img-btn {
+                margin-left: 0.5rem;
+                height: 0.6rem;
+            }
+            .dropdown-menu {
+                position: absolute;
+                top: calc(100% + 2px);
+                left: 0;
+                z-index: 2;
+
+                min-width: 120px;
+
+                background-color: #fff;
+
+                border: 1px solid #000;
+                border-bottom: 2px solid #000;
+                border-right: 2px solid #000;
+                border-radius: 0 10px 10px 10px;
+                li {
+                    font-size: 1rem;
+                    text-transform: lowercase;
+
+                    width: 100%;
+                    padding: 0.5rem;
+
+                    border-radius: 0 10px 10px 10px;
+
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: $gray;
+                    }
+                    
+                    a {
+                        width: 100%;
+                    }
+                }
             }
         }
+    }
+
+    .products-container {
+        display: grid;
+        grid-template-columns: repeat( auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        .card {
+            position: relative;
+            button {
+                @include flexbox(flex, center, center);
+                float: left;
+            }
+        
+            .best-seller {
+                position: absolute;
+                right: 10px;
+                top: 10px;
     
-        .best-seller {
-            position: absolute;
-            right: 10px;
-            top: 10px;
-
-            background-color: $action;
-            color: #fff;
-
-            padding: 0.2rem 0.4rem;
-            border-radius: 5px;
-
-            font-size: 0.9rem;
-            
-            margin: 0;
-            
+                background-color: $action;
+                color: #fff;
+    
+                padding: 0.2rem 0.4rem;
+                border-radius: 5px;
+    
+                font-size: 0.9rem;
+                
+                margin: 0;
+                
+            }
         }
     }
            

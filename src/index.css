@@ -82,6 +82,9 @@ nav .primary-navigation li:hover .img-hover-underlined {
   align-items: center;
   height: 120vh;
   position: relative;
+  background-image: url("img/hero-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .Hero figure img {
   height: 80px;
@@ -143,30 +146,66 @@ nav .primary-navigation li:hover .img-hover-underlined {
 }
 .Products {
   margin: 6rem 2rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
 }
 .Products h2 {
   grid-column: 1/-1;
 }
-.Products .card {
+.Products .options-container {
+  margin-bottom: 1rem;
+  display: flex;
+}
+.Products .options-container .dropdown {
   position: relative;
 }
-.Products .card button {
+.Products .options-container .dropdown .dropdown-toggle-btn .img-btn {
+  margin-left: 0.5rem;
+  height: 0.6rem;
+}
+.Products .options-container .dropdown .dropdown-menu {
+  position: absolute;
+  top: calc(100% + 2px);
+  left: 0;
+  z-index: 2;
+  min-width: 120px;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-bottom: 2px solid #000;
+  border-right: 2px solid #000;
+  border-radius: 0 10px 10px 10px;
+}
+.Products .options-container .dropdown .dropdown-menu li {
+  font-size: 1rem;
+  text-transform: lowercase;
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0 10px 10px 10px;
+  cursor: pointer;
+}
+.Products .options-container .dropdown .dropdown-menu li:hover {
+  background-color: #e2e1e1;
+}
+.Products .options-container .dropdown .dropdown-menu li a {
+  width: 100%;
+}
+.Products .products-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+.Products .products-container .card {
+  position: relative;
+}
+.Products .products-container .card button {
   display: flex;
   justify-content: center;
   align-items: center;
   float: left;
 }
-.Products .card button .img-btn {
-  height: 1rem;
-}
-.Products .card .best-seller {
+.Products .products-container .card .best-seller {
   position: absolute;
   right: 10px;
   top: 10px;
-  background-color: rgb(201, 147, 167);
+  background-color: #A6545A;
   color: #fff;
   padding: 0.2rem 0.4rem;
   border-radius: 5px;
@@ -223,21 +262,24 @@ button {
   letter-spacing: 0.03rem;
   gap: 8px;
 }
+button .img-btn {
+  height: 1rem;
+}
 button:hover {
   background-color: #e2e1e1;
 }
 button.btn-action {
-  background-color: rgb(201, 147, 167);
+  background-color: rgba(166, 84, 90, 0.6);
 }
 button.btn-action:hover {
-  background-color: rgba(201, 147, 167, 0.7);
+  background-color: rgba(166, 84, 90, 0.7);
 }
 button:first-of-type {
   margin-right: 0.5rem;
 }
 
 .SelectedProducts {
-  background-color: rgba(201, 147, 167, 0.7);
+  background-color: rgba(166, 84, 90, 0.5);
   padding: 2rem;
 }
 .SelectedProducts .cards-container {

@@ -4,6 +4,11 @@
     @include flexbox(flex, center, center);
     height: 120vh;
     position: relative;
+
+    background-image: url("img/hero-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
     figure {
         img {
             height: 80px;

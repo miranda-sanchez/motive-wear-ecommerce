@@ -1,54 +1,143 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { products } from "../data/ProductData";
 import imgHeartBtn from "../img/heart-icon.png";
 import imgCartBtn from "../img/cart-icon.png";
+import imgArrowBtn from "../img/arrow-down.png";
 
 const Products = () => {
+  // Hover effect of product imgs
   const [hoveredProductId, setHoveredProductId] = useState(null);
+  const handleMouseEnter = (id) => setHoveredProductId(id);
+  const handleMouseLeave = () => setHoveredProductId(null);
 
-  const handleMouseEnter = (id) => {
-    setHoveredProductId(id);
+  // Dropdown options
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedType, setSelectedType] = useState("all");
+  const [filterByPrice, setFilterByPrice] = useState(false);
+  const dropdownRef = useRef(null);
+
+  const handleToggle = () => setIsOpen(!isOpen);
+  const handleClickOutside = (event) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      setIsOpen(false);
+    }
   };
 
-  const handleMouseLeave = () => {
-    setHoveredProductId(null);
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  // Filter products
+  const filteredProducts = products.filter((product) => {
+    const matchType =
+      selectedType === "all" || product.typeOfProduct === selectedType;
+    const matchPrice = !filterByPrice || product.price > 60;
+    return matchType && matchPrice;
+  });
+
+  // Handle dropdown item click
+  const handleDropdownClick = (type) => {
+    setSelectedType(type);
+    setIsOpen(false);
   };
 
   return (
     <main className="Products">
       <h2>Products</h2>
-      {products.map((product) => (
-        <article
-          key={product.id}
-          className="card"
-          onMouseEnter={() => handleMouseEnter(product.id)}
-          onMouseLeave={handleMouseLeave}
-        >
-          <figure>
-            <img
-              src={
-                hoveredProductId === product.id
-                  ? product.urlImgHover
-                  : product.urlImg
-              }
-              alt={product.nameProduct}
-            />
-          </figure>
-          <div className="info-card">
-            {product.bestSeller && <p className="best-seller">Best Seller</p>}
-            <p className="shipping">Free shipping</p>
-            <h3>{product.nameProduct}</h3>
-            <p className="price">${product.price}</p>
-            <button className="btn-action">
-              Add to Cart
-              <img className="img-btn" src={imgCartBtn} alt="Cart icon" />
-            </button>
-            <button>
-              <img className="img-btn" src={imgHeartBtn} alt="Favorite icon" />
-            </button>
-          </div>
-        </article>
-      ))}
+      <section className="options-container">
+        <div className="dropdown" ref={dropdownRef}>
+          <button
+            className="dropdown-toggle-btn"
+            type="button"
+            onClick={handleToggle}
+            aria-expanded={isOpen}
+          >
+            {selectedType === "all" ? "All products" : selectedType}
+            <img className="img-btn" src={imgArrowBtn} alt="Arrow down icon" />
+          </button>
+          {isOpen && (
+            <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <a
+                className="dropdown-item"
+                href="#"
+                onClick={() => handleDropdownClick("t-shirts")}
+              >
+                <li>T-shirts</li>
+              </a>
+              <a
+                className="dropdown-item"
+                href="#"
+                onClick={() => handleDropdownClick("sneakers")}
+              >
+                <li>Sneakers</li>
+              </a>
+              <a
+                className="dropdown-item"
+                href="#"
+                onClick={() => handleDropdownClick("all")}
+              >
+                <li>All Products</li>
+              </a>
+            </ul>
+          )}
+        </div>
+
+        <div className="filter-by-price">
+          <button onClick={() => setFilterByPrice(!filterByPrice)}>
+            Free shipping
+          </button>
+        </div>
+      </section>
+
+      <section className="products-container">
+        {filteredProducts.length === 0 ? (
+          <p>No products found.</p>
+        ) : (
+          filteredProducts.map((product) => (
+            <article
+              key={product.id}
+              className="card"
+              onMouseEnter={() => handleMouseEnter(product.id)}
+              onMouseLeave={handleMouseLeave}
+            >
+              <figure>
+                <img
+                  src={
+                    hoveredProductId === product.id
+                      ? product.urlImgHover
+                      : product.urlImg
+                  }
+                  alt={product.nameProduct}
+                />
+              </figure>
+              <div className="info-card">
+                {product.bestSeller && (
+                  <p className="best-seller">Best Seller</p>
+                )}
+                <p className="shipping">
+                  {product.price > 60 ? "Free shipping" : "Shipping from $10"}
+                </p>
+                <h3>{product.nameProduct}</h3>
+                <p className="price">${product.price}</p>
+                <button className="btn-action">
+                  Add to Cart
+                  <img className="img-btn" src={imgCartBtn} alt="Cart icon" />
+                </button>
+                <button>
+                  <img
+                    className="img-btn"
+                    src={imgHeartBtn}
+                    alt="Favorite icon"
+                  />
+                </button>
+              </div>
+            </article>
+          ))
+        )}
+      </section>
     </main>
   );
 };

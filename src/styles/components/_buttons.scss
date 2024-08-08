@@ -14,12 +14,17 @@ button {
 
     gap: 8px;
 
+    .img-btn {
+        height: 1rem;
+        
+    }
+
     &:hover {
         background-color: $gray;
     }
     
     &.btn-action {
-        background-color: $action;
+        background-color: rgba($action, 0.6);
         
         &:hover {
             background-color: rgba($action, 0.7);

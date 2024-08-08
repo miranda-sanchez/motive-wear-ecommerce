@@ -18,10 +18,24 @@ import img9 from "../img/img9.png";
 import img9Hover from "../img/img9-hover.png";
 import img10 from "../img/img10.png";
 import img10Hover from "../img/img10-hover.png";
+import img11 from "../img/img11.png";
+import img11Hover from "../img/img11-hover.png";
+import img12 from "../img/img12.png";
+import img12Hover from "../img/img12-hover.png";
+import img13 from "../img/img13.png";
+import img13Hover from "../img/img13-hover.png";
+import img14 from "../img/img14.png";
+import img14Hover from "../img/img14-hover.png";
+import img15 from "../img/img15.png";
+import img15Hover from "../img/img15-hover.png";
+import img16 from "../img/img16.png";
+import img16Hover from "../img/img16-hover.png";
 
 export const products = [
   {
+    //T-SHIRTS
     id: 1,
+    typeOfProduct: "t-shirts",
     nameProduct: "T-shirt 1",
     price: 15,
     urlImg: img1,
@@ -31,6 +45,7 @@ export const products = [
   },
   {
     id: 2,
+    typeOfProduct: "t-shirts",
     nameProduct: "T-shirt 2",
     price: 18,
     urlImg: img2,
@@ -40,6 +55,7 @@ export const products = [
   },
   {
     id: 3,
+    typeOfProduct: "t-shirts",
     nameProduct: "T-shirt 3",
     price: 14,
     urlImg: img3,
@@ -49,6 +65,7 @@ export const products = [
   },
   {
     id: 4,
+    typeOfProduct: "t-shirts",
     nameProduct: "T-shirt 4",
     price: 16,
     urlImg: img4,
@@ -58,6 +75,7 @@ export const products = [
   },
   {
     id: 5,
+    typeOfProduct: "t-shirts",
     nameProduct: "T-shirt 5",
     price: 11,
     urlImg: img5,
@@ -67,6 +85,7 @@ export const products = [
   },
   {
     id: 6,
+    typeOfProduct: "t-shirts",
     nameProduct: "T-shirt 6",
     price: 20,
     urlImg: img6,
@@ -76,6 +95,7 @@ export const products = [
   },
   {
     id: 7,
+    typeOfProduct: "t-shirts",
     nameProduct: "T-shirt 7",
     price: 17,
     urlImg: img7,
@@ -85,6 +105,7 @@ export const products = [
   },
   {
     id: 8,
+    typeOfProduct: "t-shirts",
     nameProduct: "T-shirt 8",
     price: 15,
     urlImg: img8,
@@ -94,6 +115,7 @@ export const products = [
   },
   {
     id: 9,
+    typeOfProduct: "t-shirts",
     nameProduct: "T-shirt 9",
     price: 18,
     urlImg: img9,
@@ -103,11 +125,74 @@ export const products = [
   },
   {
     id: 10,
+    typeOfProduct: "t-shirts",
     nameProduct: "T-shirt 10",
     price: 20,
     urlImg: img10,
     urlImgHover: img10Hover,
     quantity: 1,
     bestSeller: false,
+  },
+
+  //SNEAKERS
+  {
+    id: 11,
+    typeOfProduct: "sneakers",
+    nameProduct: "Sneaker 1",
+    price: 80,
+    urlImg: img11,
+    urlImgHover: img11Hover,
+    quantity: 1,
+    bestSeller: false,
+  },
+  {
+    id: 12,
+    typeOfProduct: "sneakers",
+    nameProduct: "Sneaker 2",
+    price: 50,
+    urlImg: img12,
+    urlImgHover: img12Hover,
+    quantity: 1,
+    bestSeller: true,
+  },
+  {
+    id: 13,
+    typeOfProduct: "sneakers",
+    nameProduct: "Sneaker 3",
+    price: 76,
+    urlImg: img13,
+    urlImgHover: img13Hover,
+    quantity: 1,
+    bestSeller: false,
+  },
+  {
+    id: 14,
+    typeOfProduct: "sneakers",
+    nameProduct: "Sneaker 4",
+    price: 70,
+    urlImg: img14,
+    urlImgHover: img14Hover,
+    quantity: 1,
+    bestSeller: false,
+  },
+  {
+    id: 15,
+    typeOfProduct: "sneakers",
+    nameProduct: "Sneaker 5",
+    price: 65,
+    urlImg: img15,
+    urlImgHover: img15Hover,
+    quantity: 1,
+    bestSeller: false,
+  },
+  {
+    id: 16,
+    typeOfProduct: "sneakers",
+    nameProduct: "Sneaker 6",
+    price: 79,
+    urlImg: img16,
+    urlImgHover: img16Hover,
+    quantity: 1,
+    bestSeller: true,
   },
 ];

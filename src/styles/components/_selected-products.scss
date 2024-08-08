@@ -2,7 +2,7 @@
 @use "../base/colors" as *;
 
 .SelectedProducts {
-    background-color: rgba($action, 0.7);
+    background-color: rgba($action, 0.5);
     padding: 2rem;
 
     .cards-container {
