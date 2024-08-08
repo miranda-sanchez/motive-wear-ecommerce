@@ -1,0 +1,42 @@
+@use "../base/mixins" as *;
+
+.card {
+    background-color: #e2e1e1;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 1rem;
+    padding: 1rem;
+
+    figure {
+        @include flexbox(flex, center, center);
+        img {
+            width: 100%;
+        }
+    }
+
+    .info-card {
+        .shipping {
+            font-size: 0.9rem;
+            color: rgba(#000, 0.5);
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            font-weight: normal;
+            text-align: left;
+        }
+        .price {
+            text-align: left;
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin: 0;
+        }
+        
+        
+    }
+
+    &:hover {
+        box-shadow: 5px 5px 40px  #bdbdbd;
+        transition: .1s ease;
+    }
+}

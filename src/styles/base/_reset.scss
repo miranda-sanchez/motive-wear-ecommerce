@@ -19,7 +19,7 @@ body {
 }
 
 .App {
-  max-width: 1400px;
+  //max-width: 1400px;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -28,7 +28,7 @@ body {
 main {
   flex: 1;
   min-height: 100vh;
-  margin-top: 6rem; //Header's height
+  margin: 6rem 2rem; //Header's height
 }
 
 h2 {

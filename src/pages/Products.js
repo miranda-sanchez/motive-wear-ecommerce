@@ -20,7 +20,7 @@ const Products = () => {
       {products.map((product) => (
         <article
           key={product.id}
-          className="item"
+          className="card"
           onMouseEnter={() => handleMouseEnter(product.id)}
           onMouseLeave={handleMouseLeave}
         >
@@ -34,9 +34,10 @@ const Products = () => {
               alt={product.nameProduct}
             />
           </figure>
-          <div className="info-product">
+          <div className="info-card">
+            <p className="shipping">Free shipping</p>
             <h3>{product.nameProduct}</h3>
-            <p>${product.price}</p>
+            <p className="price">${product.price}</p>
             <button className="btn-action">
               Add to Cart
               <img className="img-btn" src={imgCartBtn} alt="Cart icon" />

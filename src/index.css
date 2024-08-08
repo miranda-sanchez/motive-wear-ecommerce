@@ -85,47 +85,27 @@ nav .primary-navigation li:hover .img-hover-underlined {
 
 .Products {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 2rem;
 }
 .Products h2 {
   grid-column: 1/-1;
 }
-.Products .item {
-  background-color: #e2e1e1;
-  padding: 0.5rem;
-  cursor: pointer;
-  border-radius: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.Products .item img {
-  max-width: 250px;
-}
-.Products .item .info-product h3 {
-  font-size: 1.2rem;
-  font-weight: normal;
-}
-.Products .item .info-product p {
-  font-size: 1.5rem;
-  text-align: center;
-  margin: 0;
-}
-.Products .item .info-product button {
+.Products button {
   display: flex;
   justify-content: center;
   align-items: center;
   float: left;
 }
-.Products .item .info-product button .img-btn {
+.Products button .img-btn {
   height: 1rem;
 }
-.Products .item:hover {
-  transition: 0.2s ease;
-}
 
+@media (min-width: 768px) {
+  .Products {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
 .Footer {
   display: flex;
   justify-content: center;
@@ -182,6 +162,47 @@ button:first-of-type {
   margin-right: 0.5rem;
 }
 
+.SelectedProducts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: #e2e1e1;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+.card figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card figure img {
+  width: 100%;
+}
+.card .info-card .shipping {
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.5);
+}
+.card .info-card h3 {
+  font-size: 1.2rem;
+  font-weight: normal;
+  text-align: left;
+}
+.card .info-card .price {
+  text-align: left;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin: 0;
+}
+.card:hover {
+  box-shadow: 5px 5px 40px #bdbdbd;
+  transition: 0.1s ease;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -200,7 +221,6 @@ body {
 }
 
 .App {
-  max-width: 1400px;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -209,7 +229,7 @@ body {
 main {
   flex: 1;
   min-height: 100vh;
-  margin-top: 6rem;
+  margin: 6rem 2rem;
 }
 
 h2 {
