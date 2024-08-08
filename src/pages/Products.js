@@ -35,6 +35,7 @@ const Products = () => {
             />
           </figure>
           <div className="info-card">
+            {product.bestSeller && <p className="best-seller">Best Seller</p>}
             <p className="shipping">Free shipping</p>
             <h3>{product.nameProduct}</h3>
             <p className="price">${product.price}</p>

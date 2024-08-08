@@ -27,6 +27,7 @@ export const products = [
     urlImg: img1,
     urlImgHover: img1Hover,
     quantity: 1,
+    bestSeller: true,
   },
   {
     id: 2,
@@ -35,6 +36,7 @@ export const products = [
     urlImg: img2,
     urlImgHover: img2Hover,
     quantity: 1,
+    bestSeller: false,
   },
   {
     id: 3,
@@ -43,6 +45,7 @@ export const products = [
     urlImg: img3,
     urlImgHover: img3Hover,
     quantity: 1,
+    bestSeller: false,
   },
   {
     id: 4,
@@ -51,6 +54,7 @@ export const products = [
     urlImg: img4,
     urlImgHover: img4Hover,
     quantity: 1,
+    bestSeller: false,
   },
   {
     id: 5,
@@ -59,6 +63,7 @@ export const products = [
     urlImg: img5,
     urlImgHover: img5Hover,
     quantity: 1,
+    bestSeller: false,
   },
   {
     id: 6,
@@ -67,6 +72,7 @@ export const products = [
     urlImg: img6,
     urlImgHover: img6Hover,
     quantity: 1,
+    bestSeller: true,
   },
   {
     id: 7,
@@ -75,6 +81,7 @@ export const products = [
     urlImg: img7,
     urlImgHover: img7Hover,
     quantity: 1,
+    bestSeller: false,
   },
   {
     id: 8,
@@ -83,6 +90,7 @@ export const products = [
     urlImg: img8,
     urlImgHover: img8Hover,
     quantity: 1,
+    bestSeller: false,
   },
   {
     id: 9,
@@ -91,6 +99,7 @@ export const products = [
     urlImg: img9,
     urlImgHover: img9Hover,
     quantity: 1,
+    bestSeller: true,
   },
   {
     id: 10,
@@ -99,5 +108,6 @@ export const products = [
     urlImg: img10,
     urlImgHover: img10Hover,
     quantity: 1,
+    bestSeller: false,
   },
 ];

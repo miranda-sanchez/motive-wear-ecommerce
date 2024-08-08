@@ -1,6 +1,12 @@
 @use "../base/mixins" as *;
 
 .SelectedProducts {
-    @include flexbox(flex, center, center);
-   
+    @include flexbox(grid, center, center);
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+
+    h2 {
+        grid-column: 1 / -1;
+    }
+    
 }

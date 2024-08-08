@@ -80,9 +80,67 @@ nav .primary-navigation li:hover .img-hover-underlined {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 120vh;
+  position: relative;
+}
+.Hero figure img {
+  height: 80px;
+  position: absolute;
+}
+.Hero figure img:first-child {
+  right: 0.5rem;
+}
+.Hero figure img:nth-child(2) {
+  top: 200px;
+  left: 5rem;
+}
+.Hero figure img:nth-child(3) {
+  height: 60px;
+  top: 600px;
+  left: 1rem;
+}
+.Hero figure img:last-child {
+  height: 30px;
+  top: 100px;
+  right: 2rem;
 }
 
+@media (min-width: 768px) {
+  .Hero figure img {
+    height: 120px;
+  }
+  .Hero figure img:first-child {
+    right: 8rem;
+  }
+  .Hero figure img:nth-child(2) {
+    top: 200px;
+    left: 5rem;
+  }
+  .Hero figure img:nth-child(3) {
+    height: 80px;
+    top: 600px;
+    left: 5rem;
+  }
+  .Hero figure img:last-child {
+    height: 60px;
+    top: 100px;
+    right: 5rem;
+  }
+}
+@media (min-width: 1200px) {
+  .Hero figure img {
+    height: 200px;
+  }
+  .Hero figure img:nth-child(3) {
+    height: 160px;
+    top: 600px;
+    left: 10rem;
+  }
+  .Hero figure img:last-child {
+    height: 120px;
+    right: 20rem;
+  }
+}
 .Products {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -91,14 +149,28 @@ nav .primary-navigation li:hover .img-hover-underlined {
 .Products h2 {
   grid-column: 1/-1;
 }
-.Products button {
+.Products .card {
+  position: relative;
+}
+.Products .card button {
   display: flex;
   justify-content: center;
   align-items: center;
   float: left;
 }
-.Products button .img-btn {
+.Products .card button .img-btn {
   height: 1rem;
+}
+.Products .card .best-seller {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background-color: rgb(201, 147, 167);
+  color: #fff;
+  padding: 0.2rem 0.4rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  margin: 0;
 }
 
 @media (min-width: 768px) {
@@ -153,26 +225,31 @@ button:hover {
   background-color: #e2e1e1;
 }
 button.btn-action {
-  background-color: rgb(221, 167, 188);
+  background-color: rgb(201, 147, 167);
 }
 button.btn-action:hover {
-  background-color: rgba(221, 167, 188, 0.7);
+  background-color: rgba(201, 147, 167, 0.7);
 }
 button:first-of-type {
   margin-right: 0.5rem;
 }
 
 .SelectedProducts {
-  display: flex;
+  display: grid;
   justify-content: center;
   align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+}
+.SelectedProducts h2 {
+  grid-column: 1/-1;
 }
 
 .card {
   background-color: #e2e1e1;
   padding: 0.5rem;
   cursor: pointer;
-  border-radius: 1rem;
+  border-radius: 10px;
   padding: 1rem;
 }
 .card figure {

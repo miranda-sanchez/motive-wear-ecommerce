@@ -2,6 +2,80 @@
 
 .Hero {
     @include flexbox(flex, center, center);
-    height: 100vh;
-   
+    height: 120vh;
+    position: relative;
+    figure {
+        img {
+            height: 80px;
+            position: absolute;
+            &:first-child {
+                right: 0.5rem;
+            }
+            &:nth-child(2) {
+                top: 200px;
+                left: 5rem;
+            }
+
+            &:nth-child(3) {
+                height: 60px;
+                top: 600px;
+                left: 1rem;
+            }
+
+            &:last-child {
+                height: 30px;
+                top: 100px;
+                right: 2rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .Hero figure {
+        img {
+            height: 120px;
+            &:first-child {
+                right: 8rem;
+            }
+            &:nth-child(2) {
+                top: 200px;
+                left: 5rem;
+            }
+
+            &:nth-child(3) {
+                height: 80px;
+                top: 600px;
+                left: 5rem;
+            }
+
+            &:last-child {
+                height: 60px;
+                top: 100px;
+                right: 5rem;
+            }
+        }
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .Hero figure {
+        img {
+            height: 200px;
+           
+
+            &:nth-child(3) {
+                height: 160px;
+                top: 600px;
+                left: 10rem;
+            }
+
+            &:last-child {
+                height: 120px;
+                right: 20rem;
+            }
+        }
+    }
+
 }
