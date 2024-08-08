@@ -1,12 +1,19 @@
 @use "../base/mixins" as *;
+@use "../base/colors" as *;
 
 .SelectedProducts {
-    @include flexbox(grid, center, center);
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 2rem;
+    background-color: rgba($action, 0.7);
+    padding: 2rem;
 
-    h2 {
-        grid-column: 1 / -1;
+    .cards-container {
+        @include flexbox(grid, center, center);
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+        padding: 2rem 0;
+
+        max-width: 1200px;
+        margin: 0 auto;
+
     }
     
 }

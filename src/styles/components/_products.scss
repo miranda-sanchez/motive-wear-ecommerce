@@ -2,6 +2,8 @@
 @use "../base/colors" as *;
 
 .Products {
+    margin: 6rem 2rem; //Header's height
+
     display: grid;
     grid-template-columns: repeat( auto-fit, minmax(200px, 1fr));
     gap: 2rem;
@@ -18,6 +20,7 @@
             
             .img-btn {
                 height: 1rem;
+                
             }
         }
     
@@ -43,6 +46,6 @@
 
 @media (min-width: 768px) {
     .Products {
-        grid-template-columns: repeat( auto-fit, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
 }

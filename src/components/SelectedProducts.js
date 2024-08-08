@@ -6,19 +6,21 @@ const SelectedProducts = () => {
 
   return (
     <section className="SelectedProducts">
-      <h2>Our Most Popular Products</h2>
-      {bestSellers.map((product) => (
-        <article key={product.id} className="card">
-          <figure>
-            <img src={product.urlImg} alt={product.nameProduct} />
-          </figure>
-          <div className="info-card">
-            <p className="shipping">Free shipping</p>
-            <h3>{product.nameProduct}</h3>
-            <p className="price">${product.price}</p>
-          </div>
-        </article>
-      ))}
+      <h2>Popular Products</h2>
+      <div className="cards-container">
+        {bestSellers.map((product) => (
+          <article key={product.id} className="card">
+            <figure>
+              <img src={product.urlImg} alt={product.nameProduct} />
+            </figure>
+            <div className="info-card">
+              <p className="shipping">Free shipping</p>
+              <h3>{product.nameProduct}</h3>
+              <p className="price">${product.price}</p>
+            </div>
+          </article>
+        ))}
+      </div>
     </section>
   );
 };

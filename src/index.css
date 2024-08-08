@@ -138,10 +138,11 @@ nav .primary-navigation li:hover .img-hover-underlined {
   }
   .Hero figure img:last-child {
     height: 120px;
-    right: 20rem;
+    right: 30rem;
   }
 }
 .Products {
+  margin: 6rem 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 2rem;
@@ -220,6 +221,7 @@ button {
   font-size: 1rem;
   text-transform: lowercase;
   letter-spacing: 0.03rem;
+  gap: 8px;
 }
 button:hover {
   background-color: #e2e1e1;
@@ -235,14 +237,18 @@ button:first-of-type {
 }
 
 .SelectedProducts {
+  background-color: rgba(201, 147, 167, 0.7);
+  padding: 2rem;
+}
+.SelectedProducts .cards-container {
   display: grid;
   justify-content: center;
   align-items: center;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 2rem;
-}
-.SelectedProducts h2 {
-  grid-column: 1/-1;
+  padding: 2rem 0;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .card {
@@ -306,7 +312,6 @@ body {
 main {
   flex: 1;
   min-height: 100vh;
-  margin: 6rem 2rem;
 }
 
 h2 {
