@@ -147,6 +147,9 @@ nav .primary-navigation li:hover .img-hover-underlined {
 .Products {
   margin: 7rem 2rem 2rem 2rem;
 }
+.Products h2 {
+  margin-bottom: 0.5rem;
+}
 .Products .options-container {
   margin-bottom: 1rem;
   display: flex;
@@ -315,7 +318,7 @@ button:first-of-type {
   transform: translateX(0);
   transition: left 0.15s ease;
   position: absolute;
-  left: 5px;
+  left: 3px;
   top: 50%;
   transform: translateY(-50%);
 }
