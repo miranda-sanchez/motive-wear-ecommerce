@@ -145,14 +145,13 @@ nav .primary-navigation li:hover .img-hover-underlined {
   }
 }
 .Products {
-  margin: 6rem 2rem;
-}
-.Products h2 {
-  grid-column: 1/-1;
+  margin: 7rem 2rem 2rem 2rem;
 }
 .Products .options-container {
   margin-bottom: 1rem;
   display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 .Products .options-container .dropdown {
   position: relative;
@@ -187,6 +186,11 @@ nav .primary-navigation li:hover .img-hover-underlined {
 .Products .options-container .dropdown .dropdown-menu li a {
   width: 100%;
 }
+.Products .options-container .filter-by-price p {
+  margin: 0 0.5rem 0 1rem;
+  float: left;
+  text-transform: lowercase;
+}
 .Products .products-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -213,8 +217,21 @@ nav .primary-navigation li:hover .img-hover-underlined {
   margin: 0;
 }
 
-@media (min-width: 768px) {
-  .Products {
+@media (min-width: 796px) {
+  .Products .main-container {
+    display: grid;
+    justify-content: center;
+    align-items: start;
+    grid-template-columns: 200px 1fr;
+  }
+  .Products .main-container .options-container {
+    flex-direction: column;
+    align-items: start;
+  }
+  .Products .main-container .options-container .filter-by-price p, .Products .main-container .options-container .filter-by-price button {
+    margin: 1rem 0.5rem 0 0;
+  }
+  .Products .main-container .products-container {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 }
@@ -276,6 +293,40 @@ button.btn-action:hover {
 }
 button:first-of-type {
   margin-right: 0.5rem;
+}
+
+.toggle-btn {
+  background-color: #fff;
+  border: 1px solid #000;
+  border-bottom: 2px solid #000;
+  border-radius: 99px;
+  width: 50px;
+  height: 30px;
+  transition: background-color 0.1s ease, border-color 0.2s ease;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4039215686);
+  position: relative;
+}
+.toggle-btn .thumb {
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 99px;
+  transform: translateX(0);
+  transition: left 0.15s ease;
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.toggle-btn.toggled {
+  background-color: #A6545A;
+}
+.toggle-btn:hover {
+  background-color: #e2e1e1;
+}
+.toggle-btn.toggled .thumb {
+  left: 25px;
 }
 
 .SelectedProducts {

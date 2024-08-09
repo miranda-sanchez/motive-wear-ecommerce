@@ -34,4 +34,43 @@ button {
     &:first-of-type {
         margin-right: 0.5rem;
     }
+
+}
+
+.toggle-btn {
+    background-color: #fff;
+    border: 1px solid #000;
+    border-bottom: 2px solid #000;
+    border-radius: 99px;
+    width: 50px;
+    height: 30px;
+    transition: background-color 0.1s ease, border-color 0.2s ease;
+    box-shadow: 1px 1px 10px #00000067;
+    position: relative;
+
+    .thumb {
+        height: 20px;
+        width: 20px;
+        background-color: #fff;
+        border: 1px solid #000;
+        border-radius: 99px;
+        transform: translateX(0);
+        transition: left 0.15s ease;
+        position: absolute;
+        left: 5px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &.toggled {
+        background-color: $action;
+    }
+
+    &:hover {
+        background-color: $gray;
+    }
+
+    &.toggled .thumb {
+        left: calc(50px - 25px);
+    }
 }

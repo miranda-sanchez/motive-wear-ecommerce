@@ -3,6 +3,7 @@ import { products } from "../data/ProductData";
 import imgHeartBtn from "../img/heart-icon.png";
 import imgCartBtn from "../img/cart-icon.png";
 import imgArrowBtn from "../img/arrow-down.png";
+import ToggleBtn from "../components/ToggleBtn";
 
 const Products = () => {
   // Hover effect of product imgs
@@ -44,100 +45,116 @@ const Products = () => {
     setIsOpen(false);
   };
 
+  // Handle filter by price toggle
+  const handleFilterByPriceClick = () => {
+    setFilterByPrice((prev) => !prev);
+  };
+
   return (
     <main className="Products">
       <h2>Products</h2>
-      <section className="options-container">
-        <div className="dropdown" ref={dropdownRef}>
-          <button
-            className="dropdown-toggle-btn"
-            type="button"
-            onClick={handleToggle}
-            aria-expanded={isOpen}
-          >
-            {selectedType === "all" ? "All products" : selectedType}
-            <img className="img-btn" src={imgArrowBtn} alt="Arrow down icon" />
-          </button>
-          {isOpen && (
-            <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <a
-                className="dropdown-item"
-                href="#"
-                onClick={() => handleDropdownClick("t-shirts")}
-              >
-                <li>T-shirts</li>
-              </a>
-              <a
-                className="dropdown-item"
-                href="#"
-                onClick={() => handleDropdownClick("sneakers")}
-              >
-                <li>Sneakers</li>
-              </a>
-              <a
-                className="dropdown-item"
-                href="#"
-                onClick={() => handleDropdownClick("all")}
-              >
-                <li>All Products</li>
-              </a>
-            </ul>
-          )}
-        </div>
-
-        <div className="filter-by-price">
-          <button onClick={() => setFilterByPrice(!filterByPrice)}>
-            Free shipping
-          </button>
-        </div>
-      </section>
-
-      <section className="products-container">
-        {filteredProducts.length === 0 ? (
-          <p>No products found.</p>
-        ) : (
-          filteredProducts.map((product) => (
-            <article
-              key={product.id}
-              className="card"
-              onMouseEnter={() => handleMouseEnter(product.id)}
-              onMouseLeave={handleMouseLeave}
+      <div className="main-container">
+        <section className="options-container">
+          <div className="dropdown" ref={dropdownRef}>
+            <button
+              className="dropdown-toggle-btn"
+              type="button"
+              onClick={handleToggle}
+              aria-expanded={isOpen}
             >
-              <figure>
-                <img
-                  src={
-                    hoveredProductId === product.id
-                      ? product.urlImgHover
-                      : product.urlImg
-                  }
-                  alt={product.nameProduct}
-                />
-              </figure>
-              <div className="info-card">
-                {product.bestSeller && (
-                  <p className="best-seller">Best Seller</p>
-                )}
-                <p className="shipping">
-                  {product.price > 60 ? "Free shipping" : "Shipping from $10"}
-                </p>
-                <h3>{product.nameProduct}</h3>
-                <p className="price">${product.price}</p>
-                <button className="btn-action">
-                  Add to Cart
-                  <img className="img-btn" src={imgCartBtn} alt="Cart icon" />
-                </button>
-                <button>
+              {selectedType === "all" ? "All products" : selectedType}
+              <img
+                className="img-btn"
+                src={imgArrowBtn}
+                alt="Arrow down icon"
+              />
+            </button>
+            {isOpen && (
+              <ul
+                className="dropdown-menu"
+                aria-labelledby="dropdownMenuButton1"
+              >
+                <a
+                  className="dropdown-item"
+                  href="#"
+                  onClick={() => handleDropdownClick("t-shirts")}
+                >
+                  <li>T-shirts</li>
+                </a>
+                <a
+                  className="dropdown-item"
+                  href="#"
+                  onClick={() => handleDropdownClick("sneakers")}
+                >
+                  <li>Sneakers</li>
+                </a>
+                <a
+                  className="dropdown-item"
+                  href="#"
+                  onClick={() => handleDropdownClick("all")}
+                >
+                  <li>All Products</li>
+                </a>
+              </ul>
+            )}
+          </div>
+
+          <div className="filter-by-price">
+            <p>Free shipping</p>
+            <ToggleBtn
+              toggled={filterByPrice}
+              onClick={handleFilterByPriceClick}
+            />
+          </div>
+        </section>
+
+        <section className="products-container">
+          {filteredProducts.length === 0 ? (
+            <p>No products found.</p>
+          ) : (
+            filteredProducts.map((product) => (
+              <article
+                key={product.id}
+                className="card"
+                onMouseEnter={() => handleMouseEnter(product.id)}
+                onMouseLeave={handleMouseLeave}
+              >
+                <figure>
                   <img
-                    className="img-btn"
-                    src={imgHeartBtn}
-                    alt="Favorite icon"
+                    src={
+                      hoveredProductId === product.id
+                        ? product.urlImgHover
+                        : product.urlImg
+                    }
+                    alt={product.nameProduct}
                   />
-                </button>
-              </div>
-            </article>
-          ))
-        )}
-      </section>
+                </figure>
+                <div className="info-card">
+                  {product.bestSeller && (
+                    <p className="best-seller">Best Seller</p>
+                  )}
+                  <p className="shipping">
+                    {product.price > 60 ? "Free shipping" : "Shipping from $10"}
+                  </p>
+                  <h3>{product.nameProduct}</h3>
+                  <p className="price">${product.price}</p>
+                  <button className="btn-action">
+                    Add to Cart
+                    <img className="img-btn" src={imgCartBtn} alt="Cart icon" />
+                  </button>
+                  <button>
+                    <img
+                      className="img-btn"
+                      src={imgHeartBtn}
+                      alt="Favorite icon"
+                    />
+                  </button>
+                </div>
+              </article>
+            ))
+          )}
+        </section>
+      </div>
     </main>
   );
 };
