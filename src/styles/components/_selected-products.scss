@@ -4,16 +4,24 @@
 .SelectedProducts {
     background-color: rgba($action, 0.5);
     padding: 2rem;
+    
 
     .cards-container {
-        @include flexbox(grid, center, center);
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 2rem;
-        padding: 2rem 0;
-
         max-width: 1200px;
         margin: 0 auto;
-
+        padding: 1rem;
+        .card {
+            margin: 0 0.5rem; // lateral margin of 0.5rem for a total of 1rem space between cards
+        }
+    }
+    
+      
+    .slick-slide {
+        padding: 0 0.5rem; // adds lateral padding to create space between slides
+    }
+      
+    .slick-list {
+        margin: 0 -0.5rem; // adjusts the margin of the carousel container
     }
     
 }
