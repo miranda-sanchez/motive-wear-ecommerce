@@ -1,0 +1,43 @@
+@use "../base/mixins" as *;
+@use "../base/colors" as *;
+
+.dropdown {
+    position: relative;
+    .dropdown-toggle-btn .img-btn {
+        margin-left: 0.5rem;
+        height: 0.6rem;
+    }
+    .dropdown-menu {
+        position: absolute;
+        //left, right, top, and bottom are defined in each particular case
+        z-index: 2;
+
+        min-width: 120px;
+
+        background-color: #fff;
+
+        border: 1px solid #000;
+        border-bottom: 2px solid #000;
+        border-right: 2px solid #000;
+        border-radius: 0 0 10px 10px;
+        li {
+            font-size: 1rem;
+            text-transform: lowercase;
+
+            width: 100%;
+            padding: 0.5rem;
+
+            border-radius: 0 10px 10px 10px;
+
+            cursor: pointer;
+
+            &:hover {
+                background-color: $gray;
+            }
+            
+            a {
+                width: 100%;
+            }
+        }
+    }
+}

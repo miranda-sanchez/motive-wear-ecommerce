@@ -5,7 +5,20 @@ import imgCartBtn from "../img/cart-icon.png";
 import imgArrowBtn from "../img/arrow-down.png";
 import ToggleBtn from "../components/ToggleBtn";
 
-const Products = () => {
+const Products = ({ allProducts, setAllProducts }) => {
+  // Cart
+  const onAddProduct = (product) => {
+    if (allProducts.find((item) => item.id === product.id)) {
+      const products = allProducts.map((item) =>
+        item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
+      );
+
+      return setAllProducts([...products]);
+    } else {
+      setAllProducts([...allProducts, product]);
+    }
+  };
+
   // Hover effect of product imgs
   const [hoveredProductId, setHoveredProductId] = useState(null);
   const handleMouseEnter = (id) => setHoveredProductId(id);
@@ -104,6 +117,7 @@ const Products = () => {
             <ToggleBtn
               toggled={filterByPrice}
               onClick={handleFilterByPriceClick}
+              arial-label="Show products with free shipping"
             />
           </div>
         </section>
@@ -138,11 +152,15 @@ const Products = () => {
                   </p>
                   <h3>{product.nameProduct}</h3>
                   <p className="price">${product.price}</p>
-                  <button className="btn-action">
+                  <button
+                    className="btn-action"
+                    aria-label="Add to cart"
+                    onClick={() => onAddProduct(product)}
+                  >
                     Add to Cart
                     <img className="img-btn" src={imgCartBtn} alt="Cart icon" />
                   </button>
-                  <button>
+                  <button title="Add to wishlist">
                     <img
                       className="img-btn"
                       src={imgHeartBtn}
