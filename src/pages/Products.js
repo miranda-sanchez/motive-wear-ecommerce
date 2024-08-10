@@ -5,16 +5,26 @@ import imgCartBtn from "../img/cart-icon.png";
 import imgArrowBtn from "../img/arrow-down.png";
 import ToggleBtn from "../components/ToggleBtn";
 
-const Products = ({ allProducts, setAllProducts }) => {
+const Products = ({
+  allProducts,
+  setAllProducts,
+  countProducts,
+  setCountProducts,
+  total,
+  setTotal,
+}) => {
   // Cart
   const onAddProduct = (product) => {
     if (allProducts.find((item) => item.id === product.id)) {
       const products = allProducts.map((item) =>
         item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
       );
-
+      setTotal(total + product.price * product.quantity);
+      setCountProducts(countProducts + product.quantity);
       return setAllProducts([...products]);
     } else {
+      setTotal(total + product.price * product.quantity);
+      setCountProducts(countProducts + product.quantity);
       setAllProducts([...allProducts, product]);
     }
   };

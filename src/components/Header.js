@@ -7,7 +7,14 @@ import crossIcon from "../img/Cross-icon.PNG";
 import imgCartIcon from "../img/cart-icon.png";
 import imgHeartIcon from "../img/heart-icon.png";
 
-const Header = ({ allProducts, setAllProducts }) => {
+const Header = ({
+  allProducts,
+  setAllProducts,
+  total,
+  countProducts,
+  setCountProducts,
+  setTotal,
+}) => {
   // Toggle navbar
   const [isNavOpen, setIsNavOpen] = useState(false);
 
@@ -35,6 +42,22 @@ const Header = ({ allProducts, setAllProducts }) => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+
+  // Cart: Delete products
+
+  const onDeleteProduct = (product) => {
+    const results = allProducts.filter((item) => item.id !== product.id);
+
+    setTotal(total - product.price * product.quantity);
+    setCountProducts(countProducts - product.quantity);
+    setAllProducts(results);
+  };
+
+  const onCleanCart = () => {
+    setAllProducts([]);
+    setTotal(0);
+    setCountProducts(0);
+  };
 
   return (
     <header className="Header">
@@ -71,10 +94,13 @@ const Header = ({ allProducts, setAllProducts }) => {
 
         <div className="dropdown" title="Cart" ref={dropdownRef}>
           <button
-            className="dropdown-toggle-btn icon-navbar-btn"
+            className="dropdown-toggle-btn icon-navbar-btn cart-btn"
             onClick={handleToggleCartDropdown}
           >
             <img src={imgCartIcon} alt="Cart icon" />
+            <div className="cart-count-container">
+              <span className="cart-count">{countProducts}</span>
+            </div>
           </button>
           {isCartDropdownOpen && (
             <div className="dropdown-menu container-cart-products">
@@ -84,6 +110,12 @@ const Header = ({ allProducts, setAllProducts }) => {
                     {allProducts.map((product) => (
                       <li className="cart-product-item" key={product.id}>
                         <div className="cart-product-info">
+                          <figure className="cart-product-img">
+                            <img
+                              src={product.urlImg}
+                              alt={product.nameProduct}
+                            />
+                          </figure>
                           <span className="cart-product-quantity">
                             {product.quantity}
                           </span>
@@ -94,13 +126,25 @@ const Header = ({ allProducts, setAllProducts }) => {
                             ${product.price}
                           </span>
                         </div>
-                        <figure className="cart-product-img">
-                          <img src={product.urlImg} alt={product.nameProduct} />
-                        </figure>
+
+                        <button className="delete-product-btn">
+                          <img
+                            src={crossIcon}
+                            alt="Cross"
+                            onClick={() => onDeleteProduct(product)}
+                          />
+                        </button>
                       </li>
                     ))}
                   </ul>
-                  <p className="cart-total">Total: $90</p>
+                  <p className="cart-total">Total: ${total}</p>
+                  <button
+                    className="btn-clear-all"
+                    aria-label="Empty cart"
+                    onClick={onCleanCart}
+                  >
+                    Empty cart
+                  </button>
                 </>
               ) : (
                 <p className="cart-empty">Your cart is empty.</p>
