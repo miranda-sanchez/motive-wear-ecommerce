@@ -8,13 +8,29 @@
         margin-bottom: 0.5rem;
     }
 
+    .selected-options-container {
+        display: flex;
+        margin: 1rem 0;
+        li {
+            margin-right: 1rem;
+            padding: 0.2rem 0.5rem;
+            background-color: $gray;
+            border-radius: 10px;
+            text-transform: lowercase;
+
+            .delete-btn {
+                background-color: $gray;
+            }
+        }
+    }
+
     .options-container {
         margin-bottom: 1rem;
         @include flexbox(flex, flex-start, center);
         
         .dropdown-menu {
             top: calc(100% + 2px);
-        left: 0;
+            left: 0;
         }
 
         .filter-by-price {
@@ -29,18 +45,22 @@
 
     .products-container {
         display: grid;
-        grid-template-columns: repeat( auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat( auto-fit, minmax(250px, 1fr));
         gap: 2rem;
         .card {
             position: relative;
             button {
                 @include flexbox(flex, center, center);
                 float: left;
+
+                &:first-of-type {
+                    margin-right: 0.5rem;
+                }
             }
         
             .best-seller {
                 position: absolute;
-                right: 10px;
+                left: 10px;
                 top: 10px;
     
                 background-color: $action;
@@ -61,8 +81,11 @@
 
 @media (min-width: 796px) {
     .Products {
-        .main-container {
+        .selected-options-container {
+            grid: 1 / 1;
+        }
 
+        .main-container {
             @include flexbox(grid, center, start);
             grid-template-columns: 200px 1fr;
             .options-container {
@@ -76,9 +99,6 @@
                 }
             }
     
-            .products-container{
-                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            }
         }
     }
 }

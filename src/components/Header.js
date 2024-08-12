@@ -127,7 +127,7 @@ const Header = ({
                           </span>
                         </div>
 
-                        <button className="delete-product-btn">
+                        <button className="delete-btn">
                           <img
                             src={crossIcon}
                             alt="Cross"

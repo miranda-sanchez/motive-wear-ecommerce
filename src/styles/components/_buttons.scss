@@ -31,9 +31,7 @@ button {
         }
     }
 
-    &:first-of-type {
-        margin-right: 0.5rem;
-    }
+    
 
 }
 
@@ -68,5 +66,14 @@ button {
 
     &.toggled .thumb {
         left: calc(50px - 25px);
+    }
+}
+
+.delete-btn {
+    border: none;
+    margin: 0;
+    border-radius: 50%;
+    img {
+        height: 0.8rem;
     }
 }

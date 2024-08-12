@@ -4,6 +4,7 @@ import imgHeartBtn from "../img/heart-icon.png";
 import imgCartBtn from "../img/cart-icon.png";
 import imgArrowBtn from "../img/arrow-down.png";
 import ToggleBtn from "../components/ToggleBtn";
+import crossIcon from "../img/Cross-icon.PNG";
 
 const Products = ({
   allProducts,
@@ -13,7 +14,7 @@ const Products = ({
   total,
   setTotal,
 }) => {
-  // Cart
+  // CART
   const onAddProduct = (product) => {
     if (allProducts.find((item) => item.id === product.id)) {
       const products = allProducts.map((item) =>
@@ -29,12 +30,12 @@ const Products = ({
     }
   };
 
-  // Hover effect of product imgs
+  // HOVER EFFECT OF PRODUCT IMAGES
   const [hoveredProductId, setHoveredProductId] = useState(null);
   const handleMouseEnter = (id) => setHoveredProductId(id);
   const handleMouseLeave = () => setHoveredProductId(null);
 
-  // Dropdown options
+  // DROPDOWN
   const [isOpen, setIsOpen] = useState(false);
   const [selectedType, setSelectedType] = useState("all");
   const [filterByPrice, setFilterByPrice] = useState(false);
@@ -54,7 +55,7 @@ const Products = ({
     };
   }, []);
 
-  // Filter products
+  // FILTER PRODUCTS
   const filteredProducts = products.filter((product) => {
     const matchType =
       selectedType === "all" || product.typeOfProduct === selectedType;
@@ -62,20 +63,49 @@ const Products = ({
     return matchType && matchPrice;
   });
 
+  // Active filters
+  const [activeFilters, setActiveFilters] = useState([]);
+
+  // Udpating active filters
+  const updateActiveFilters = (filter) => {
+    if (!activeFilters.includes(filter)) {
+      setActiveFilters([...activeFilters, filter]);
+    }
+  };
+
+  // Deleting active filters
+  const removeFilter = (filter) => {
+    setActiveFilters(activeFilters.filter((item) => item !== filter));
+    if (filter === "Free shipping") setFilterByPrice(false);
+    if (filter === selectedType) setSelectedType("all");
+  };
+
   // Handle dropdown item click
   const handleDropdownClick = (type) => {
     setSelectedType(type);
+    updateActiveFilters(type === "all" ? "All products" : type);
     setIsOpen(false);
   };
 
   // Handle filter by price toggle
   const handleFilterByPriceClick = () => {
     setFilterByPrice((prev) => !prev);
+    updateActiveFilters("Free shipping");
   };
 
   return (
     <main className="Products">
       <h2>Products</h2>
+      <ol className="selected-options-container">
+        {activeFilters.map((filter, index) => (
+          <li key={index}>
+            {filter}
+            <button className="delete-btn" onClick={() => removeFilter(filter)}>
+              <img src={crossIcon} alt="Cross" />
+            </button>
+          </li>
+        ))}
+      </ol>
       <div className="main-container">
         <section className="options-container">
           <div className="dropdown" ref={dropdownRef}>

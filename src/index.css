@@ -112,14 +112,6 @@
 .Header nav .container-cart-products .cart-product-item .cart-product-info .cart-product-price {
   font-weight: 700;
 }
-.Header nav .container-cart-products .cart-product-item .delete-product-btn {
-  border: none;
-  margin: 0;
-  border-radius: 50%;
-}
-.Header nav .container-cart-products .cart-product-item .delete-product-btn img {
-  height: 0.8rem;
-}
 .Header nav .container-cart-products .btn-clear-all {
   border: none;
   width: 100%;
@@ -259,6 +251,20 @@
 .Products h2 {
   margin-bottom: 0.5rem;
 }
+.Products .selected-options-container {
+  display: flex;
+  margin: 1rem 0;
+}
+.Products .selected-options-container li {
+  margin-right: 1rem;
+  padding: 0.2rem 0.5rem;
+  background-color: #e2e1e1;
+  border-radius: 10px;
+  text-transform: lowercase;
+}
+.Products .selected-options-container li .delete-btn {
+  background-color: #e2e1e1;
+}
 .Products .options-container {
   margin-bottom: 1rem;
   display: flex;
@@ -276,7 +282,7 @@
 }
 .Products .products-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
 }
 .Products .products-container .card {
@@ -288,9 +294,12 @@
   align-items: center;
   float: left;
 }
+.Products .products-container .card button:first-of-type {
+  margin-right: 0.5rem;
+}
 .Products .products-container .card .best-seller {
   position: absolute;
-  right: 10px;
+  left: 10px;
   top: 10px;
   background-color: #A6545A;
   color: #fff;
@@ -301,6 +310,9 @@
 }
 
 @media (min-width: 796px) {
+  .Products .selected-options-container {
+    grid: 1/1;
+  }
   .Products .main-container {
     display: grid;
     justify-content: center;
@@ -313,9 +325,6 @@
   }
   .Products .main-container .options-container .filter-by-price p, .Products .main-container .options-container .filter-by-price button {
     margin: 1rem 0.5rem 0 0;
-  }
-  .Products .main-container .products-container {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 }
 .Footer {
@@ -374,9 +383,6 @@ button.btn-action {
 button.btn-action:hover {
   background-color: rgba(166, 84, 90, 0.7);
 }
-button:first-of-type {
-  margin-right: 0.5rem;
-}
 
 .toggle-btn {
   background-color: #e2e1e1;
@@ -407,6 +413,15 @@ button:first-of-type {
 }
 .toggle-btn.toggled .thumb {
   left: 25px;
+}
+
+.delete-btn {
+  border: none;
+  margin: 0;
+  border-radius: 50%;
+}
+.delete-btn img {
+  height: 0.8rem;
 }
 
 .SelectedProducts {
