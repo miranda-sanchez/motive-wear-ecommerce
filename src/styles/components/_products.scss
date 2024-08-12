@@ -81,24 +81,40 @@
 
 @media (min-width: 796px) {
     .Products {
+      .main-container {
+        display: grid;
+        grid-template-columns: 200px 1fr; // Dos columnas: una de 200px y otra flexible (1fr)
+        grid-template-rows: auto auto; // Dos filas automáticas
+  
+        // Deja la primera columna de la primera fila vacía
+        .empty-cell {
+          grid-column: 1 / 2; // Primera columna
+          grid-row: 1 / 2; // Primera fila
+        }
+  
         .selected-options-container {
-            grid: 1 / 1;
+          grid-column: 2 / 3; // Segunda columna
+          grid-row: 1 / 2; // Primera fila
+          width: 100%; // Ocupar todo el ancho de la columna
         }
-
-        .main-container {
-            @include flexbox(grid, center, start);
-            grid-template-columns: 200px 1fr;
-            .options-container {
-                flex-direction: column;
-                align-items: start;
-    
-                .filter-by-price {
-                    p, button {
-                        margin: 1rem 0.5rem 0 0;
-                    }
-                }
+  
+        .options-container {
+          grid-column: 1 / 2; // Primera columna
+          grid-row: 2 / 3; // Segunda fila
+          flex-direction: column;
+          align-items: start;
+  
+          .filter-by-price {
+            p, button {
+              margin: 1rem 0.5rem 0 0;
             }
-    
+          }
         }
+  
+        .products-container {
+          grid-column: 2 / 3; // Segunda columna
+          grid-row: 2 / 3; // Segunda fila
+        }
+      }
     }
-}
+  }

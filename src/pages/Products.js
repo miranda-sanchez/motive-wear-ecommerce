@@ -89,24 +89,41 @@ const Products = ({
 
   // Handle filter by price toggle
   const handleFilterByPriceClick = () => {
-    setFilterByPrice((prev) => !prev);
-    updateActiveFilters("Free shipping");
+    setFilterByPrice((prev) => {
+      const newState = !prev;
+
+      if (newState) {
+        // If the filter is activated, add "Free shipping" to active filters
+        updateActiveFilters("Free shipping");
+      } else {
+        // If the filter is deactivated, remove "Free shipping" from active filters
+        removeFilter("Free shipping");
+      }
+
+      return newState;
+    });
   };
 
   return (
     <main className="Products">
       <h2>Products</h2>
-      <ol className="selected-options-container">
-        {activeFilters.map((filter, index) => (
-          <li key={index}>
-            {filter}
-            <button className="delete-btn" onClick={() => removeFilter(filter)}>
-              <img src={crossIcon} alt="Cross" />
-            </button>
-          </li>
-        ))}
-      </ol>
       <div className="main-container">
+        <div className="empty-cell"></div>
+
+        <ol className="selected-options-container">
+          {activeFilters.map((filter, index) => (
+            <li key={index}>
+              {filter}
+              <button
+                className="delete-btn"
+                onClick={() => removeFilter(filter)}
+              >
+                <img src={crossIcon} alt="Cross" />
+              </button>
+            </li>
+          ))}
+        </ol>
+
         <section className="options-container">
           <div className="dropdown" ref={dropdownRef}>
             <button
