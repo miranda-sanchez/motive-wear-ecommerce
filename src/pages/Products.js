@@ -128,6 +128,7 @@ const Products = ({
           <div className="dropdown" ref={dropdownRef}>
             <button
               className="dropdown-toggle-btn"
+              title="Select a category"
               type="button"
               onClick={handleToggle}
               aria-expanded={isOpen}
@@ -210,14 +211,14 @@ const Products = ({
                   <h3>{product.nameProduct}</h3>
                   <p className="price">${product.price}</p>
                   <button
-                    className="btn-action"
+                    className="btn-action cart-btn"
                     aria-label="Add to cart"
                     onClick={() => onAddProduct(product)}
                   >
                     Add to Cart
                     <img className="img-btn" src={imgCartBtn} alt="Cart icon" />
                   </button>
-                  <button title="Add to wishlist">
+                  <button className="wishlist-btn" title="Add to wishlist">
                     <img
                       className="img-btn"
                       src={imgHeartBtn}

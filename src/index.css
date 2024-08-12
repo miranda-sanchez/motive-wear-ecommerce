@@ -261,9 +261,11 @@
   background-color: #e2e1e1;
   border-radius: 10px;
   text-transform: lowercase;
+  float: left;
 }
 .Products .selected-options-container li .delete-btn {
   background-color: #e2e1e1;
+  float: right;
 }
 .Products .options-container {
   margin-bottom: 1rem;
@@ -288,14 +290,26 @@
 .Products .products-container .card {
   position: relative;
 }
-.Products .products-container .card button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.Products .products-container .card .price {
+  width: fit-content;
   float: left;
 }
-.Products .products-container .card button:first-of-type {
-  margin-right: 0.5rem;
+.Products .products-container .card .cart-btn {
+  float: right;
+}
+.Products .products-container .card .wishlist-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background-color: transparent;
+}
+.Products .products-container .card .wishlist-btn img {
+  height: 1.5rem;
+}
+.Products .products-container .card .wishlist-btn:hover {
+  border-radius: 50%;
+  box-shadow: 5px 5px 40px #bdbdbd;
 }
 .Products .products-container .card .best-seller {
   position: absolute;
@@ -372,6 +386,9 @@
 }
 
 button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 1px solid #000;
   border-bottom: 3px solid #000;
   border-right: 3px solid #000;

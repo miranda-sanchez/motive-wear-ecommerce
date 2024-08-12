@@ -17,9 +17,11 @@
             background-color: $gray;
             border-radius: 10px;
             text-transform: lowercase;
+            float: left;
 
             .delete-btn {
                 background-color: $gray;
+                float: right;
             }
         }
     }
@@ -38,6 +40,7 @@
                 margin: 0 0.5rem 0 1rem;
                 float: left;
                 text-transform: lowercase;
+
                 
             }
         }
@@ -49,13 +52,34 @@
         gap: 2rem;
         .card {
             position: relative;
-            button {
-                @include flexbox(flex, center, center);
+            
+            .price {
+                width: fit-content;
                 float: left;
+            }
 
-                &:first-of-type {
-                    margin-right: 0.5rem;
+            .cart-btn {
+                float: right;
+            }
+
+            .wishlist-btn {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+
+                border: none;
+                background-color: transparent;
+
+                img {
+                    height:1.5rem;
                 }
+
+                &:hover {
+                    border-radius: 50%;
+                    box-shadow: 5px 5px 40px #bdbdbd;
+                }
+
+                
             }
         
             .best-seller {
@@ -83,24 +107,23 @@
     .Products {
       .main-container {
         display: grid;
-        grid-template-columns: 200px 1fr; // Dos columnas: una de 200px y otra flexible (1fr)
-        grid-template-rows: auto auto; // Dos filas automáticas
+        grid-template-columns: 200px 1fr; 
+        grid-template-rows: auto auto; 
   
-        // Deja la primera columna de la primera fila vacía
         .empty-cell {
-          grid-column: 1 / 2; // Primera columna
-          grid-row: 1 / 2; // Primera fila
+          grid-column: 1 / 2;
+          grid-row: 1 / 2; 
         }
   
         .selected-options-container {
-          grid-column: 2 / 3; // Segunda columna
-          grid-row: 1 / 2; // Primera fila
-          width: 100%; // Ocupar todo el ancho de la columna
+          grid-column: 2 / 3;
+          grid-row: 1 / 2; 
+          width: 100%; 
         }
   
         .options-container {
-          grid-column: 1 / 2; // Primera columna
-          grid-row: 2 / 3; // Segunda fila
+          grid-column: 1 / 2; 
+          grid-row: 2 / 3;
           flex-direction: column;
           align-items: start;
   
@@ -112,8 +135,8 @@
         }
   
         .products-container {
-          grid-column: 2 / 3; // Segunda columna
-          grid-row: 2 / 3; // Segunda fila
+          grid-column: 2 / 3; 
+          grid-row: 2 / 3; 
         }
       }
     }
