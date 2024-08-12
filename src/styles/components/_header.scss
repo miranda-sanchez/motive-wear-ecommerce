@@ -52,6 +52,7 @@
             height: 40px;
             border-radius: 99px;
             border: none;
+            cursor: pointer;
             @include flexbox(flex, center, center);
             margin-left: -20px;
     
@@ -66,7 +67,7 @@
         
         }
 
-        .cart-btn {
+        .cart-navbar-btn {
             position: relative;
             .cart-count-container {
                 height: 1.2rem;

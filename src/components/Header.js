@@ -94,7 +94,7 @@ const Header = ({
 
         <div className="dropdown" title="Cart" ref={dropdownRef}>
           <button
-            className="dropdown-toggle-btn icon-navbar-btn cart-btn"
+            className="dropdown-toggle-btn icon-navbar-btn cart-navbar-btn"
             onClick={handleToggleCartDropdown}
           >
             <img src={imgCartIcon} alt="Cart icon" />
@@ -153,7 +153,7 @@ const Header = ({
           )}
         </div>
 
-        <div className="icon-navbar-btn" title="Wishlist">
+        <div className="icon-navbar-btn wishlist-navbar-btn" title="Wishlist">
           <img src={imgHeartIcon} alt="Heart icon" />
         </div>
 
