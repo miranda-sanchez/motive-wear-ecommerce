@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Products from "./pages/Products";
 import Footer from "./components/Footer";
+import ProductPage from "./components/ProductPage";
 
 function App() {
   const [allProducts, setAllProducts] = useState([]);
@@ -21,11 +22,12 @@ function App() {
         setCountProducts={setCountProducts}
       />
       <Routes>
-        <Route index exact path="/" element={<Home />}></Route>
+        <Route index exact path="/" element={<Home />} />
+        <Route path="/products" element={<Products />} />
         <Route
-          path="/products"
+          path="/products/:id"
           element={
-            <Products
+            <ProductPage
               allProducts={allProducts}
               setAllProducts={setAllProducts}
               total={total}
@@ -34,7 +36,7 @@ function App() {
               setCountProducts={setCountProducts}
             />
           }
-        ></Route>
+        />
       </Routes>
       <Footer />
     </div>

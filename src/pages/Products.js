@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import { products } from "../data/ProductData";
 import imgHeartBtn from "../img/heart-icon.png";
 import imgCartBtn from "../img/cart-icon.png";
@@ -6,28 +7,12 @@ import imgArrowBtn from "../img/arrow-down.png";
 import ToggleBtn from "../components/ToggleBtn";
 import crossIcon from "../img/Cross-icon.PNG";
 
-const Products = ({
-  allProducts,
-  setAllProducts,
-  countProducts,
-  setCountProducts,
-  total,
-  setTotal,
-}) => {
-  // CART
-  const onAddProduct = (product) => {
-    if (allProducts.find((item) => item.id === product.id)) {
-      const products = allProducts.map((item) =>
-        item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
-      );
-      setTotal(total + product.price * product.quantity);
-      setCountProducts(countProducts + product.quantity);
-      return setAllProducts([...products]);
-    } else {
-      setTotal(total + product.price * product.quantity);
-      setCountProducts(countProducts + product.quantity);
-      setAllProducts([...allProducts, product]);
-    }
+const Products = () => {
+  // NAVIGATE
+  const navigate = useNavigate();
+
+  const handleProductClick = (id) => {
+    navigate(`/products/${id}`);
   };
 
   // HOVER EFFECT OF PRODUCT IMAGES
@@ -190,6 +175,7 @@ const Products = ({
                 className="card"
                 onMouseEnter={() => handleMouseEnter(product.id)}
                 onMouseLeave={handleMouseLeave}
+                onClick={() => handleProductClick(product.id)}
               >
                 <figure>
                   <img
@@ -210,14 +196,7 @@ const Products = ({
                   </p>
                   <h3>{product.nameProduct}</h3>
                   <p className="price">${product.price}</p>
-                  <button
-                    className="btn-action cart-btn"
-                    aria-label="Add to cart"
-                    onClick={() => onAddProduct(product)}
-                  >
-                    Add to Cart
-                    <img className="img-btn" src={imgCartBtn} alt="Cart icon" />
-                  </button>
+
                   <button className="wishlist-btn" title="Add to wishlist">
                     <img
                       className="img-btn"

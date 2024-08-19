@@ -247,7 +247,8 @@
   }
 }
 .Products {
-  margin: 7rem 2rem 2rem 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 .Products h2 {
   margin-bottom: 0.5rem;
@@ -565,6 +566,7 @@ body {
 main {
   flex: 1;
   min-height: 100vh;
+  margin-top: 7rem;
 }
 
 h2 {
