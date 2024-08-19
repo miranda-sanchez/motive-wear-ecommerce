@@ -2,8 +2,7 @@
 @use "../base/colors" as *;
 
 .Products {
-    margin-left: 2rem; 
-    margin-right: 2rem; 
+    margin: 7rem 2rem 2rem 2rem; // 7rem considers the height of the header
 
     h2 {
         margin-bottom: 0.5rem;

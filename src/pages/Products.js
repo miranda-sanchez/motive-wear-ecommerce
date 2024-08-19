@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { products } from "../data/ProductData";
 import imgHeartBtn from "../img/heart-icon.png";
-import imgCartBtn from "../img/cart-icon.png";
 import imgArrowBtn from "../img/arrow-down.png";
 import ToggleBtn from "../components/ToggleBtn";
 import crossIcon from "../img/Cross-icon.PNG";

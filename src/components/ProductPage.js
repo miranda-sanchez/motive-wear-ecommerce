@@ -1,7 +1,8 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { products } from "../data/ProductData";
 import imgCartBtn from "../img/cart-icon.png";
+import imgArrow from "../img/arrow-down.png";
 
 const ProductPage = ({
   allProducts,
@@ -30,19 +31,33 @@ const ProductPage = ({
   };
 
   return (
-    <div className="ProductPage">
-      <h2>{product.nameProduct}</h2>
-      <img src={product.urlImg} alt={product.nameProduct} />
-      <p>Price: ${product.price}</p>
-      <button
-        className="btn-action cart-btn"
-        aria-label="Add to cart"
-        onClick={() => onAddProduct(product)}
-      >
-        Add to Cart
-        <img className="img-btn" src={imgCartBtn} alt="Cart icon" />
-      </button>
-    </div>
+    <main className="ProductPage">
+      <Link to="/products">
+        <div className="go-back">
+          <img className="img-arrow-icon" src={imgArrow} alt="" />
+          <p>Go back to Products</p>
+        </div>
+      </Link>
+      <section className="product-page-content">
+        <div className="product-page-info">
+          <h1 className="product-page-title">{product.nameProduct}</h1>
+          <p className="product-page-price">${product.price}</p>
+
+          <button
+            className="btn-action cart-btn"
+            aria-label="Add to cart"
+            onClick={() => onAddProduct(product)}
+          >
+            Add to Cart
+            <img className="img-btn" src={imgCartBtn} alt="Cart icon" />
+          </button>
+        </div>
+
+        <figure className="product-page-img">
+          <img src={product.urlImg} alt={product.nameProduct} />
+        </figure>
+      </section>
+    </main>
   );
 };
 

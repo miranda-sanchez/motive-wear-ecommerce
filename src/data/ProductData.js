@@ -42,6 +42,7 @@ export const products = [
     urlImgHover: img1Hover,
     quantity: 1,
     bestSeller: true,
+    availableSizes: ["S", "M", "L", "XL"],
   },
   {
     id: 2,
@@ -52,6 +53,7 @@ export const products = [
     urlImgHover: img2Hover,
     quantity: 1,
     bestSeller: false,
+    availableSizes: ["S", "M", "XL"],
   },
   {
     id: 3,
@@ -62,6 +64,7 @@ export const products = [
     urlImgHover: img3Hover,
     quantity: 1,
     bestSeller: false,
+    availableSizes: ["XS", "S", "M", "L", "XL"],
   },
   {
     id: 4,
@@ -72,6 +75,7 @@ export const products = [
     urlImgHover: img4Hover,
     quantity: 1,
     bestSeller: false,
+    availableSizes: ["XS", "S", "XL"],
   },
   {
     id: 5,
@@ -82,6 +86,7 @@ export const products = [
     urlImgHover: img5Hover,
     quantity: 1,
     bestSeller: false,
+    availableSizes: ["S", "M", "L"],
   },
   {
     id: 6,
@@ -92,6 +97,7 @@ export const products = [
     urlImgHover: img6Hover,
     quantity: 1,
     bestSeller: true,
+    availableSizes: ["XS", "S", "M", "L", "XL"],
   },
   {
     id: 7,
@@ -102,6 +108,7 @@ export const products = [
     urlImgHover: img7Hover,
     quantity: 1,
     bestSeller: false,
+    availableSizes: ["XS", "M", "L", "XL"],
   },
   {
     id: 8,
@@ -112,6 +119,7 @@ export const products = [
     urlImgHover: img8Hover,
     quantity: 1,
     bestSeller: false,
+    availableSizes: ["XS", "L", "XL"],
   },
   {
     id: 9,
@@ -122,6 +130,7 @@ export const products = [
     urlImgHover: img9Hover,
     quantity: 1,
     bestSeller: true,
+    availableSizes: ["L", "XL"],
   },
   {
     id: 10,
@@ -132,6 +141,7 @@ export const products = [
     urlImgHover: img10Hover,
     quantity: 1,
     bestSeller: false,
+    availableSizes: ["XS", "S", "M"],
   },
 
   //SNEAKERS
@@ -144,6 +154,7 @@ export const products = [
     urlImgHover: img11Hover,
     quantity: 1,
     bestSeller: false,
+    availableSizes: [],
   },
   {
     id: 12,
