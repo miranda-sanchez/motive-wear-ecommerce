@@ -12,6 +12,14 @@
         padding: 1rem;
         .card {
             margin: 0 0.5rem; // lateral margin of 0.5rem for a total of 1rem space between cards
+            .info-card {
+                .price {
+                    float: left;
+                }
+                button {
+                    float: right;
+                }
+            }
         }
     }
     

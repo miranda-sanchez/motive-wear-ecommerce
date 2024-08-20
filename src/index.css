@@ -488,6 +488,12 @@ button.btn-action:hover {
 .SelectedProducts .cards-container .card {
   margin: 0 0.5rem;
 }
+.SelectedProducts .cards-container .card .info-card .price {
+  float: left;
+}
+.SelectedProducts .cards-container .card .info-card button {
+  float: right;
+}
 .SelectedProducts .slick-slide {
   padding: 0 0.5rem;
 }

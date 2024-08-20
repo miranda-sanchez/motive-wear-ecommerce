@@ -44,11 +44,7 @@ const SelectedProducts = () => {
       <div className="cards-container">
         <Slider {...settings}>
           {bestSellers.map((product) => (
-            <article
-              key={product.id}
-              className="card"
-              onClick={() => handleProductClick(product.id)}
-            >
+            <article key={product.id} className="card">
               <figure>
                 <img src={product.urlImg} alt={product.nameProduct} />
               </figure>
@@ -56,6 +52,9 @@ const SelectedProducts = () => {
                 <p className="shipping">Free shipping</p>
                 <h3>{product.nameProduct}</h3>
                 <p className="price">${product.price}</p>
+                <button onClick={() => handleProductClick(product.id)}>
+                  View
+                </button>
               </div>
             </article>
           ))}
