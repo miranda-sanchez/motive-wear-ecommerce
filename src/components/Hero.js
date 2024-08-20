@@ -33,12 +33,20 @@ const Hero = () => {
 
   return (
     <section className="Hero">
-      <h1>Name of the brand.</h1>
+      <h1>Motive Wear</h1>
       <figure>
-        <img className="rellax1" src={doodle1} alt="Doodle" />
-        <img className="rellax2" src={doodle2} alt="Doodle" />
-        <img className="rellax3" src={doodleHeart1} alt="Heart-shaped doodle" />
-        <img className="rellax4" src={doodleHeart2} alt="Heart-shaped doodle" />
+        <img className="rellax1 doodle-bottom" src={doodle1} alt="Doodle" />
+        <img className="rellax2 doodle-top" src={doodle2} alt="Doodle" />
+        <img
+          className="rellax3 heart-bottom"
+          src={doodleHeart1}
+          alt="Heart-shaped doodle"
+        />
+        <img
+          className="rellax4 heart-top"
+          src={doodleHeart2}
+          alt="Heart-shaped doodle"
+        />
       </figure>
     </section>
   );

@@ -1,38 +1,50 @@
 @use "../base/mixins" as *;
+@use "../base/colors" as *;
 
 .Hero {
     @include flexbox(flex, center, center);
-    height: 80vh;
+    height: 90vh;
     position: relative;
 
     background-image: url("img/hero-bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 
-    
+    h1 {
+        font-family: 'Caveat', cursive;
+        color: #333;
+        padding: 10px;
+        background: #fff;
+        border: 2px dashed #666;
+        transform: rotate(-2deg);
+        text-transform: lowercase;
+        font-size: 3rem;
+    }
+
     figure {
         img {
-            height: 80px;
+            height: 60px;
             position: absolute;
-            &:first-child {
-                right: 0.5rem;
-            }
-            &:nth-child(2) {
-                top: 200px;
-                left: 5rem;
-            }
+        }
+        .doodle-bottom {
+            right: 0.5rem;
+            bottom: 200px;
+        }
+        .doodle-top {
+            top: 200px;
+            left: 5rem;
+        }
 
-            &:nth-child(3) {
-                height: 60px;
-                top: 600px;
-                left: 1rem;
-            }
+        .heart-bottom {
+            height: 60px;
+            bottom: 100px;
+            left: 1rem;
+        }
 
-            &:last-child {
-                height: 30px;
-                top: 100px;
-                right: 2rem;
-            }
+        .heart-top {
+            height: 50px;
+            top: 100px;
+            right: 2rem;
         }
     }
 }
@@ -41,25 +53,25 @@
     .Hero figure {
         img {
             height: 120px;
-            &:first-child {
-                right: 8rem;
-            }
-            &:nth-child(2) {
-                top: 200px;
-                left: 5rem;
-            }
+        }
+        .doodle-bottom{
+            right: 6rem;
+        }
+        .doodle-top {
+            top: 200px;
+            left: 5rem;
+        }
 
-            &:nth-child(3) {
-                height: 80px;
-                top: 600px;
-                left: 5rem;
-            }
+        .heart-bottom {
+            height: 80px;
+            top: 600px;
+            left: 5rem;
+        }
 
-            &:last-child {
-                height: 60px;
-                top: 100px;
-                right: 5rem;
-            }
+        .heart-top {
+            height: 60px;
+            top: 100px;
+            right: 5rem;
         }
     }
 
@@ -68,19 +80,17 @@
 @media (min-width: 1200px) {
     .Hero figure {
         img {
-            height: 200px;
-           
+            height: 150px;        
+        }
+        .heart-bottom {
+            height: 160px;
+            top: 600px;
+            left: 10rem;
+        }
 
-            &:nth-child(3) {
-                height: 160px;
-                top: 600px;
-                left: 10rem;
-            }
-
-            &:last-child {
-                height: 120px;
-                right: 30rem;
-            }
+        .heart-top {
+            height: 120px;
+            right: 30rem;
         }
     }
 

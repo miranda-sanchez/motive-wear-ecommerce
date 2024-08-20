@@ -182,30 +182,41 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh;
+  height: 90vh;
   position: relative;
   background-image: url("img/hero-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
+.Hero h1 {
+  font-family: "Caveat", cursive;
+  color: #333;
+  padding: 10px;
+  background: #fff;
+  border: 2px dashed #666;
+  transform: rotate(-2deg);
+  text-transform: lowercase;
+  font-size: 3rem;
+}
 .Hero figure img {
-  height: 80px;
+  height: 60px;
   position: absolute;
 }
-.Hero figure img:first-child {
+.Hero figure .doodle-bottom {
   right: 0.5rem;
+  bottom: 200px;
 }
-.Hero figure img:nth-child(2) {
+.Hero figure .doodle-top {
   top: 200px;
   left: 5rem;
 }
-.Hero figure img:nth-child(3) {
+.Hero figure .heart-bottom {
   height: 60px;
-  top: 600px;
+  bottom: 100px;
   left: 1rem;
 }
-.Hero figure img:last-child {
-  height: 30px;
+.Hero figure .heart-top {
+  height: 50px;
   top: 100px;
   right: 2rem;
 }
@@ -214,19 +225,19 @@
   .Hero figure img {
     height: 120px;
   }
-  .Hero figure img:first-child {
-    right: 8rem;
+  .Hero figure .doodle-bottom {
+    right: 6rem;
   }
-  .Hero figure img:nth-child(2) {
+  .Hero figure .doodle-top {
     top: 200px;
     left: 5rem;
   }
-  .Hero figure img:nth-child(3) {
+  .Hero figure .heart-bottom {
     height: 80px;
     top: 600px;
     left: 5rem;
   }
-  .Hero figure img:last-child {
+  .Hero figure .heart-top {
     height: 60px;
     top: 100px;
     right: 5rem;
@@ -234,14 +245,14 @@
 }
 @media (min-width: 1200px) {
   .Hero figure img {
-    height: 200px;
+    height: 150px;
   }
-  .Hero figure img:nth-child(3) {
+  .Hero figure .heart-bottom {
     height: 160px;
     top: 600px;
     left: 10rem;
   }
-  .Hero figure img:last-child {
+  .Hero figure .heart-top {
     height: 120px;
     right: 30rem;
   }
