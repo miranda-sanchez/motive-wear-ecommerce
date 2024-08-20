@@ -36,7 +36,7 @@ export const products = [
     //T-SHIRTS
     id: 1,
     typeOfProduct: "t-shirts",
-    nameProduct: "T-shirt 1",
+    nameProduct: "Big beetle t-shirt",
     price: 15,
     urlImg: img1,
     urlImgHover: img1Hover,
@@ -47,7 +47,7 @@ export const products = [
   {
     id: 2,
     typeOfProduct: "t-shirts",
-    nameProduct: "T-shirt 2",
+    nameProduct: "Side beetle t-shirt",
     price: 18,
     urlImg: img2,
     urlImgHover: img2Hover,
@@ -58,7 +58,7 @@ export const products = [
   {
     id: 3,
     typeOfProduct: "t-shirts",
-    nameProduct: "T-shirt 3",
+    nameProduct: "Dotted beetle t-shirt",
     price: 14,
     urlImg: img3,
     urlImgHover: img3Hover,
@@ -69,7 +69,7 @@ export const products = [
   {
     id: 4,
     typeOfProduct: "t-shirts",
-    nameProduct: "T-shirt 4",
+    nameProduct: "Moth t-shirt",
     price: 16,
     urlImg: img4,
     urlImgHover: img4Hover,
@@ -80,7 +80,7 @@ export const products = [
   {
     id: 5,
     typeOfProduct: "t-shirts",
-    nameProduct: "T-shirt 5",
+    nameProduct: "Chocolate butterfly t-shirt",
     price: 11,
     urlImg: img5,
     urlImgHover: img5Hover,
@@ -91,7 +91,7 @@ export const products = [
   {
     id: 6,
     typeOfProduct: "t-shirts",
-    nameProduct: "T-shirt 6",
+    nameProduct: "Green butterfly t-shirt",
     price: 20,
     urlImg: img6,
     urlImgHover: img6Hover,
@@ -102,7 +102,7 @@ export const products = [
   {
     id: 7,
     typeOfProduct: "t-shirts",
-    nameProduct: "T-shirt 7",
+    nameProduct: "Walking leaf t-shirt",
     price: 17,
     urlImg: img7,
     urlImgHover: img7Hover,
@@ -113,7 +113,7 @@ export const products = [
   {
     id: 8,
     typeOfProduct: "t-shirts",
-    nameProduct: "T-shirt 8",
+    nameProduct: "Monarch butterfly t-shirt",
     price: 15,
     urlImg: img8,
     urlImgHover: img8Hover,
@@ -124,7 +124,7 @@ export const products = [
   {
     id: 9,
     typeOfProduct: "t-shirts",
-    nameProduct: "T-shirt 9",
+    nameProduct: "Striped beetle t-shirt",
     price: 18,
     urlImg: img9,
     urlImgHover: img9Hover,
@@ -135,7 +135,7 @@ export const products = [
   {
     id: 10,
     typeOfProduct: "t-shirts",
-    nameProduct: "T-shirt 10",
+    nameProduct: "Green moth t-shirt",
     price: 20,
     urlImg: img10,
     urlImgHover: img10Hover,
@@ -148,7 +148,7 @@ export const products = [
   {
     id: 11,
     typeOfProduct: "sneakers",
-    nameProduct: "Sneaker 1",
+    nameProduct: "Reebok Classic CLUB GROUNDS",
     price: 80,
     urlImg: img11,
     urlImgHover: img11Hover,
@@ -164,7 +164,7 @@ export const products = [
   {
     id: 12,
     typeOfProduct: "sneakers",
-    nameProduct: "Sneaker 2",
+    nameProduct: "Adidas Gazelle",
     price: 50,
     urlImg: img12,
     urlImgHover: img12Hover,
@@ -175,8 +175,8 @@ export const products = [
   {
     id: 13,
     typeOfProduct: "sneakers",
-    nameProduct: "Sneaker 3",
-    price: 76,
+    nameProduct: "Adidas Gazelle",
+    price: 59,
     urlImg: img13,
     urlImgHover: img13Hover,
     quantity: 1,
@@ -191,7 +191,7 @@ export const products = [
   {
     id: 14,
     typeOfProduct: "sneakers",
-    nameProduct: "Sneaker 4",
+    nameProduct: "Reebok CLUB C",
     price: 70,
     urlImg: img14,
     urlImgHover: img14Hover,
@@ -202,7 +202,7 @@ export const products = [
   {
     id: 15,
     typeOfProduct: "sneakers",
-    nameProduct: "Sneaker 5",
+    nameProduct: "Onitsuka Tiger Tokuten",
     price: 65,
     urlImg: img15,
     urlImgHover: img15Hover,
@@ -218,7 +218,7 @@ export const products = [
   {
     id: 16,
     typeOfProduct: "sneakers",
-    nameProduct: "Sneaker 6",
+    nameProduct: "Puma Super Team",
     price: 79,
     urlImg: img16,
     urlImgHover: img16Hover,
