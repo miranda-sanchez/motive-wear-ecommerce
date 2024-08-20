@@ -156,7 +156,7 @@ const Products = () => {
             <ToggleBtn
               toggled={filterByPrice}
               onClick={handleFilterByPriceClick}
-              arial-label="Show products with free shipping"
+              aria-label="Show products with free shipping"
             />
           </div>
         </section>
