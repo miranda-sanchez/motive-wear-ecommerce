@@ -3,9 +3,11 @@ import Slider from "react-slick";
 import { products } from "../data/ProductData";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useNavigate } from "react-router-dom";
 
 const SelectedProducts = () => {
   const bestSellers = products.filter((product) => product.bestSeller);
+  const navigate = useNavigate();
 
   const settings = {
     dots: true,
@@ -32,13 +34,21 @@ const SelectedProducts = () => {
     ],
   };
 
+  const handleProductClick = (productId) => {
+    navigate(`/products/${productId}`);
+  };
+
   return (
     <section className="SelectedProducts">
       <h2>Popular Products</h2>
       <div className="cards-container">
         <Slider {...settings}>
           {bestSellers.map((product) => (
-            <article key={product.id} className="card">
+            <article
+              key={product.id}
+              className="card"
+              onClick={() => handleProductClick(product.id)}
+            >
               <figure>
                 <img src={product.urlImg} alt={product.nameProduct} />
               </figure>
