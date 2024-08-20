@@ -46,7 +46,9 @@ const Header = ({
   // Cart: Delete products
 
   const onDeleteProduct = (product) => {
-    const results = allProducts.filter((item) => item.id !== product.id);
+    const results = allProducts.filter(
+      (item) => item.id !== product.id || item.size !== product.size
+    );
 
     setTotal(total - product.price * product.quantity);
     setCountProducts(countProducts - product.quantity);
@@ -108,7 +110,10 @@ const Header = ({
                 <>
                   <ul>
                     {allProducts.map((product) => (
-                      <li className="cart-product-item" key={product.id}>
+                      <li
+                        className="cart-product-item"
+                        key={`${product.id}-${product.size}`}
+                      >
                         <div className="cart-product-info">
                           <figure className="cart-product-img">
                             <img
@@ -122,6 +127,9 @@ const Header = ({
                           <p className="cart-product-name">
                             {product.nameProduct}
                           </p>
+                          <span className="cart-product-size">
+                            {product.size}
+                          </span>
                           <span className="cart-product-price">
                             ${product.price}
                           </span>

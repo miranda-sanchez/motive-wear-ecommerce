@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { products } from "../data/ProductData";
 import imgCartBtn from "../img/cart-icon.png";
@@ -15,18 +15,33 @@ const ProductPage = ({
   const { id } = useParams();
   const product = products.find((product) => product.id === parseInt(id));
 
+  const [selectedSize, setSelectedSize] = useState(""); // State to track selected size
+
   const onAddProduct = (product) => {
-    if (allProducts.find((item) => item.id === product.id)) {
+    if (!selectedSize) {
+      alert("Please select a size before adding to the cart.");
+      return;
+    }
+
+    const updatedProduct = { ...product, size: selectedSize };
+
+    if (
+      allProducts.find(
+        (item) => item.id === updatedProduct.id && item.size === selectedSize
+      )
+    ) {
       const products = allProducts.map((item) =>
-        item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
+        item.id === updatedProduct.id && item.size === selectedSize
+          ? { ...item, quantity: item.quantity + 1 }
+          : item
       );
       setTotal(total + product.price);
       setCountProducts(countProducts + 1);
-      return setAllProducts([...products]);
+      setAllProducts([...products]);
     } else {
       setTotal(total + product.price);
       setCountProducts(countProducts + 1);
-      setAllProducts([...allProducts, { ...product, quantity: 1 }]);
+      setAllProducts([...allProducts, { ...updatedProduct, quantity: 1 }]);
     }
   };
 
@@ -50,12 +65,19 @@ const ProductPage = ({
 
         <div className="product-page-actions">
           <div className="product-sizes">
-            <p>Available Sizes:</p>
+            <h2>Sizes</h2>
             <div className="sizes-list">
               {product.availableSizes.map((size, index) => (
-                <span key={index} className="size-item">
+                <button
+                  key={index}
+                  type="button"
+                  className={`size-item ${
+                    size === selectedSize ? "selected-size" : ""
+                  }`}
+                  onClick={() => setSelectedSize(size)}
+                >
                   {size}
-                </span>
+                </button>
               ))}
             </div>
           </div>
