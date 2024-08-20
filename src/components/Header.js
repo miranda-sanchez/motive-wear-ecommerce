@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import logo from "../img/Logo.png";
+import logo from "../img/Logo.PNG";
 import { Link } from "react-router-dom";
 import underlined from "../img/Underlined-double.PNG";
 import burgerIcon from "../img/Burger-icon.PNG";
