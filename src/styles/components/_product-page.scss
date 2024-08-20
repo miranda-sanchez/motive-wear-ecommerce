@@ -45,11 +45,13 @@
 
 @media (min-width: 796px) {
   .ProductPage .product-page-content {
-    margin-top: 2rem;
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-areas: 
-      "image info";
+    grid-template-rows: repeat(2, auto);
+    gap: 1rem;
+    grid-template-areas:
+      "image info"
+      "image actions";
 
     .product-page-img {
       grid-area: image;
@@ -58,7 +60,7 @@
       justify-content: center;
 
       img {
-        max-width: 800px;
+        max-width: 600px;
         width: 100%;
         object-fit: cover;
         margin-top: 0;
@@ -67,6 +69,10 @@
 
     .product-page-info {
       grid-area: info;
+    }
+
+    .product-page-actions {
+      grid-area: actions;
     }
   }
 }

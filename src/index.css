@@ -586,10 +586,11 @@ button.btn-action:hover {
 
 @media (min-width: 796px) {
   .ProductPage .product-page-content {
-    margin-top: 2rem;
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-areas: "image info";
+    grid-template-rows: repeat(2, auto);
+    gap: 1rem;
+    grid-template-areas: "image info" "image actions";
   }
   .ProductPage .product-page-content .product-page-img {
     grid-area: image;
@@ -598,13 +599,16 @@ button.btn-action:hover {
     justify-content: center;
   }
   .ProductPage .product-page-content .product-page-img img {
-    max-width: 800px;
+    max-width: 600px;
     width: 100%;
     object-fit: cover;
     margin-top: 0;
   }
   .ProductPage .product-page-content .product-page-info {
     grid-area: info;
+  }
+  .ProductPage .product-page-content .product-page-actions {
+    grid-area: actions;
   }
 }
 * {

@@ -154,7 +154,12 @@ export const products = [
     urlImgHover: img11Hover,
     quantity: 1,
     bestSeller: false,
-    availableSizes: [],
+    availableSizes: [
+      "7 US (6 UK)",
+      "8 US (7 UK)",
+      "9 US (8 UK)",
+      "10 US (9 UK)",
+    ],
   },
   {
     id: 12,
@@ -165,6 +170,7 @@ export const products = [
     urlImgHover: img12Hover,
     quantity: 1,
     bestSeller: true,
+    availableSizes: ["6 US (5 UK)", "7 US (6 UK)", "8 US (7 UK)"],
   },
   {
     id: 13,
@@ -175,6 +181,12 @@ export const products = [
     urlImgHover: img13Hover,
     quantity: 1,
     bestSeller: false,
+    availableSizes: [
+      "7 US (6 UK)",
+      "8 US (7 UK)",
+      "9 US (8 UK)",
+      "10 US (9 UK)",
+    ],
   },
   {
     id: 14,
@@ -185,6 +197,7 @@ export const products = [
     urlImgHover: img14Hover,
     quantity: 1,
     bestSeller: false,
+    availableSizes: ["7 US (6 UK)", "8 US (7 UK)", "9 US (8 UK)"],
   },
   {
     id: 15,
@@ -195,6 +208,12 @@ export const products = [
     urlImgHover: img15Hover,
     quantity: 1,
     bestSeller: false,
+    availableSizes: [
+      "6 US (5 UK)",
+      "7 US (6 UK)",
+      "8 US (7 UK)",
+      "9 US (8 UK)",
+    ],
   },
   {
     id: 16,
@@ -205,5 +224,6 @@ export const products = [
     urlImgHover: img16Hover,
     quantity: 1,
     bestSeller: true,
+    availableSizes: ["8 US (7 UK)", "9 US (8 UK)", "10 US (9 UK)"],
   },
 ];

@@ -42,6 +42,23 @@ const ProductPage = ({
         <div className="product-page-info">
           <h1 className="product-page-title">{product.nameProduct}</h1>
           <p className="product-page-price">${product.price}</p>
+        </div>
+
+        <figure className="product-page-img">
+          <img src={product.urlImg} alt={product.nameProduct} />
+        </figure>
+
+        <div className="product-page-actions">
+          <div className="product-sizes">
+            <p>Available Sizes:</p>
+            <div className="sizes-list">
+              {product.availableSizes.map((size, index) => (
+                <span key={index} className="size-item">
+                  {size}
+                </span>
+              ))}
+            </div>
+          </div>
 
           <button
             className="btn-action cart-btn"
@@ -52,10 +69,6 @@ const ProductPage = ({
             <img className="img-btn" src={imgCartBtn} alt="Cart icon" />
           </button>
         </div>
-
-        <figure className="product-page-img">
-          <img src={product.urlImg} alt={product.nameProduct} />
-        </figure>
       </section>
     </main>
   );
