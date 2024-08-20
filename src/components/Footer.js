@@ -1,25 +1,32 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <section className="Footer">
       <article>
         <ul className="socialmedia-footer">
-          <Link to="https://www.linkedin.com/in/miranda--sanchez">
-            <li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/miranda--sanchez"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <div className="icon-linkedin"></div>
-            </li>
-          </Link>
-          <Link to="https://github.com/miranda-sanchez">
-            <li>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/miranda-sanchez"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <div className="icon-github"></div>
-            </li>
-          </Link>
+            </a>
+          </li>
         </ul>
       </article>
 
-      <article className="footer-botom">
+      <article className="footer-bottom">
         <p>2024 &copy; Miranda Sánchez</p>
       </article>
     </section>
