@@ -129,27 +129,24 @@ const Products = () => {
                 className="dropdown-menu"
                 aria-labelledby="dropdownMenuButton1"
               >
-                <a
+                <button
                   className="dropdown-item"
-                  href="#"
                   onClick={() => handleDropdownClick("t-shirts")}
                 >
                   <li>T-shirts</li>
-                </a>
-                <a
+                </button>
+                <button
                   className="dropdown-item"
-                  href="#"
                   onClick={() => handleDropdownClick("sneakers")}
                 >
                   <li>Sneakers</li>
-                </a>
-                <a
+                </button>
+                <button
                   className="dropdown-item"
-                  href="#"
                   onClick={() => handleDropdownClick("all")}
                 >
                   <li>All Products</li>
-                </a>
+                </button>
               </ul>
             )}
           </div>

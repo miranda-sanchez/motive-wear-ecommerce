@@ -294,6 +294,14 @@
   top: calc(100% + 2px);
   left: 0;
 }
+.Products .options-container .dropdown-menu button {
+  padding: 0.3rem;
+  border: none;
+  width: 100%;
+}
+.Products .options-container .dropdown-menu button:last-of-type {
+  border-radius: 0 0 20px 20px;
+}
 .Products .options-container .filter-by-price p {
   margin: 0 0.5rem 0 1rem;
   float: left;
